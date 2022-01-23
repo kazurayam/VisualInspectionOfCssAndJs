@@ -1,20 +1,65 @@
-plugins {
-  id 'java'
-  id "com.katalon.gradle-plugin" version "0.0.7"
+// VisualInspectionOfCssAndJsUsingCDP/build.gradle
+
+// $ gradle drivers
+
+version = '0.2.0'
+
+ext {
+    AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
+    ExecutionProfilesLoaderVersion = "1.2.1"
+    materialstoreVersion = '0.1.9-SNAPSHOT'
+    ashotVersion = '1.5.4'
+    javadiffutilsVersion = '4.9'
+    jsoupVersion = '1.7.2'
+    devtoolsV96Version = '4.1.1'
 }
 
 repositories {
-  mavenCentral()
+    mavenCentral()
+    mavenLocal()
+}
+
+configurations {
+    myconf
 }
 
 dependencies {
-  // sample dependencies
-  // rest-assured
-  // compile 'io.rest-assured:rest-assured:3.2.0'
-  // JsonPath
-  // compile 'io.rest-assured:json-path:3.2.0'
-  // XmlPath
-  // compile 'io.rest-assured:json-path:3.2.0'
-  // JSON Schema Validation
-  // compile 'io.rest-assured:json-schema-validator:3.2.0'
+    myconf group: 'com.kazurayam', name: 'materialstore',
+                    version: "${materialstoreVersion}"
+    myconf group: 'com.kazurayam', name: 'ExecutionProfilesLoader',
+                    version: "${ExecutionProfilesLoaderVersion}"
+    myconf group: 'ru.yandex.qatools.ashot', name: 'ashot',
+                    version: "${ashotVersion}"
+    myconf group: 'io.github.java-diff-utils', name: 'java-diff-utils',
+                    version: "${javadiffutilsVersion}"
+    myconf group: 'org.jsoup', name: 'jsoup', version: "${jsoupVersion}"
+
+    myconf group: 'org.seleniumhq.selenium', name: 'selenium-devtools-v96', version: "${devtoolsV96Version}"
+
+}
+
+task drivers {
+    doFirst {
+        delete fileTree("Drivers") {
+            include("**/" + AUTO_IMPORTED_JAR_PREFIX + "*")
+        }
+    }
+    doLast {
+        copy { copySpec ->
+            copySpec
+                .from(project.getConfigurations().getByName("myconf"))
+                .into("Drivers")
+                .include(
+                    "**/materialstore*.jar",
+                    "**/ExecutionProfilesLoader*.jar",
+                    "**/ashot*.jar",
+                    "**/jsoup*.jar",
+                    "**/java-diff-utils*.jar",
+                    "**/selenium-devtools-v96*.jar"
+                    )
+                .rename({ s ->
+                    AUTO_IMPORTED_JAR_PREFIX + s
+                    })
+        }
+    }
 }
