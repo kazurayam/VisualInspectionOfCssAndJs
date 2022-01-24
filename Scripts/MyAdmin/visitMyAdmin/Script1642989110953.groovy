@@ -25,9 +25,8 @@ WebUI.navigateToUrl("${GlobalVariable.URL}")
 
 URL url = new URL(WebUI.getUrl())
 
-/*
 // take the screenshot and the page source, save them into the store; using the Katalon keyword
-WebUI.callTestCase(findTestCase("MyAdmin/takeScreenshotAndPageSource"),
+WebUI.callTestCase(findTestCase("MyAdmin/takeScreenshot"),
 	[
 		"store": store,
 		"jobName": jobName,
@@ -37,7 +36,6 @@ WebUI.callTestCase(findTestCase("MyAdmin/takeScreenshotAndPageSource"),
 									.build()
 	]
 )
- */
 
 // scrape for the CSS and JavaScript refered by the page and materialize them into the store
 WebUI.callTestCase(findTestCase("MyAdmin/materializeCssJs"),

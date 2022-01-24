@@ -26,10 +26,4 @@ WebUI.takeFullPageScreenshot(tempFile.toAbsolutePath().toFile().toString(), [])
 Material image = store.write(jobName, jobTimestamp, FileType.PNG, metadata, tempFile)
 assert image != null
 
-// save the page source HTML into the materialstore
-WebDriver driver = DriverFactory.getWebDriver()
-Document doc = Jsoup.parse(driver.getPageSource())
-Material html = store.write(jobName, jobTimestamp, FileType.HTML, metadata, doc.toString())
-assert html != null
-
-return new Tuple(image, html)
+return image
