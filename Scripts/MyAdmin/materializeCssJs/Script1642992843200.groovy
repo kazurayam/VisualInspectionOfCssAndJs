@@ -19,8 +19,7 @@ Objects.requireNonNull(driver)
 Objects.requireNonNull(store)
 Objects.requireNonNull(jobName)
 Objects.requireNonNull(jobTimestamp)
-Objects.requireNonNull(metadata)
-assert metadata instanceof Metadata
+Objects.requireNonNull(profile)
 
 /**
  * open a new Chrome browser window with the URL given,
@@ -49,6 +48,7 @@ List<Response> responses = new ArrayList<>()
 // log responses
 network.onResponseReceived({ event ->
 	Response resp = new Response(event.getResponse().getStatus(), new URL(event.getResponse().getUrl()), event.getResponse().getMimeType())
+	println resp.toString()
 	responses.add(resp)
 })
 
@@ -88,6 +88,7 @@ responses.each { resp ->
 		
 		// copy the file into the masterialstore
 		FileType fileType = FileType.ofMimeType(resp.getMimeType())
+		Metadata metadata = Metadata.builderWithUrl(resp.getUrl()).put("profile", profile).build()
 		Material mat = store.write(jobName, jobTimestamp, fileType, metadata, tempFile)
 		assert mat != null
 	}
