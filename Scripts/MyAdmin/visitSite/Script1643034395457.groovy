@@ -26,7 +26,7 @@ WebUI.navigateToUrl("${GlobalVariable.URL}")
 URL url = new URL(WebUI.getUrl())
 
 // take the screenshot and the page source, save them into the store; using the Katalon keyword
-WebUI.callTestCase(findTestCase("MyAdmin/takeScreenshot"),
+WebUI.callTestCase(findTestCase("MyAdmin/materializeScreenshot"),
 	[
 		"store": store,
 		"jobName": jobName,

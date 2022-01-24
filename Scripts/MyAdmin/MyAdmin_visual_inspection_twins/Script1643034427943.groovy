@@ -21,7 +21,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 Path projectDir = Paths.get(RunConfiguration.getProjectDir())
 Path root = projectDir.resolve("store")
 Store store = Stores.newInstance(root)
-JobName jobName = new JobName("MyAdmin_VisualInspectionTwins")
+JobName jobName = new JobName("MyAdmin_visual_inspection_twins")
 ExecutionProfilesLoader profilesLoader = new ExecutionProfilesLoader()
 
 // --------------------------------------------------------------------
@@ -32,7 +32,7 @@ profilesLoader.loadProfile(profile1)
 WebUI.comment("Execution Profile ${profile1} was loaded")
 JobTimestamp timestampP = JobTimestamp.now()
 WebUI.callTestCase(
-	findTestCase("MyAdmin/visitMyAdmin"),
+	findTestCase("MyAdmin/visitSite"),
 	["profile": profile1, "store": store, "jobName": jobName, "jobTimestamp": timestampP]
 )
 
@@ -44,7 +44,7 @@ WebUI.comment("Execution Profile ${profile2} was loaded")
 
 JobTimestamp timestampD = JobTimestamp.now()
 WebUI.callTestCase(
-	findTestCase("MyAdmin/visitMyAdmin"),
+	findTestCase("MyAdmin/visitSite"),
 	["profile": profile2, "store": store, "jobName": jobName, "jobTimestamp": timestampD]
 )
 	
