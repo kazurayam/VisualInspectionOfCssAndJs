@@ -37,9 +37,11 @@ network.onResponseReceived({ event ->
 		System.lineSeparator())
 })
 
-LocalDateTime lastResponseReceivedAt = LocalDateTime.now()
 
-// watch the stream of responses. when the stream blocked longer than 1 second, then the stream has possibly finished
+// watch the stream of responses.
+// when the stream stayed stopped for longer than 2 seconds,
+// then the stream has possibly finished
+LocalDateTime lastResponseReceivedAt = LocalDateTime.now()
 network.onLoadingFinished({ event ->
 	lastResponseReceivedAt = LocalDateTime.now()
 })
@@ -48,7 +50,7 @@ network.onLoadingFinished({ event ->
 // Enable network events.
 network.enable()
 
-// Navigate to github.com.
+// Navigate to the site
 page.navigate("http://myadmin.kazurayam.com/");
 //page.navigate("http://http://devadmin.kazurayam.com");
 

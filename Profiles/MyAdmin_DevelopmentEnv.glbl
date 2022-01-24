@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://http://devadmin.kazurayam.com'</initValue>
+      <initValue>'http://devadmin.kazurayam.com'</initValue>
       <name>URL</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
