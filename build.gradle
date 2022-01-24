@@ -11,7 +11,8 @@ ext {
     ashotVersion = '1.5.4'
     javadiffutilsVersion = '4.9'
     jsoupVersion = '1.7.2'
-    devtoolsV96Version = '4.1.1'
+    cdtjavaclientVersion = '4.0.0'
+
 }
 
 repositories {
@@ -34,8 +35,8 @@ dependencies {
                     version: "${javadiffutilsVersion}"
     myconf group: 'org.jsoup', name: 'jsoup', version: "${jsoupVersion}"
 
-    myconf group: 'org.seleniumhq.selenium', name: 'selenium-devtools-v96', version: "${devtoolsV96Version}"
-
+    myconf group: 'com.github.kklisura.cdt', name: 'cdt-java-client',
+        version: "${cdtjavaclientVersion}"
 }
 
 task drivers {
@@ -55,7 +56,7 @@ task drivers {
                     "**/ashot*.jar",
                     "**/jsoup*.jar",
                     "**/java-diff-utils*.jar",
-                    "**/selenium-devtools-v96*.jar"
+                    "**/cdt-java-client*.jar"
                     )
                 .rename({ s ->
                     AUTO_IMPORTED_JAR_PREFIX + s
