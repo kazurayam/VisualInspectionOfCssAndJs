@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>VisualInspectionOfCssAndJsUsingCDP</name>
+   <name>VisualInspectionOfCssAndJs</name>
    <tag></tag>
    <UUID>ee0d3481-f3bf-4ff6-90f4-63f6bb6e9684</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/VisualInspectionOfCssAndJsUsingCDP/VisualInspectionOfCssAndJsUsingCDP.prj</projectFileLocation>
+   <projectFileLocation>/Users/kazuakiurayama/katalon-workspace/VisualInspectionOfCssAndJs/VisualInspectionOfCssAndJs.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>

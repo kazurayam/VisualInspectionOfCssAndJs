@@ -38,7 +38,7 @@ WebUI.callTestCase(findTestCase("MyAdmin/takeScreenshot"),
 )
 
 // scrape for the CSS and JavaScript refered by the page and materialize them into the store
-WebUI.callTestCase(findTestCase("MyAdmin/materializeCssJs"),
+WebUI.callTestCase(findTestCase("MyAdmin/materializeCssJs_by_kklisura_cdt"),
 	[
 		"driver": DriverFactory.getWebDriver(),
 		"store": store,
