@@ -15,8 +15,10 @@ import com.kazurayam.materialstore.FileType
 import com.kazurayam.materialstore.Material
 import com.kazurayam.materialstore.Metadata
 import com.kazurayam.ks.visualinspection.DownloadUtil
+import com.kazurayam.ks.visualinspection.ResponseInspected
 
-Objects.requireNonNull(driver)
+Objects.requireNonNull(chrome)
+assert chrome instanceof ChromeDriver
 Objects.requireNonNull(store)
 Objects.requireNonNull(jobName)
 Objects.requireNonNull(jobTimestamp)
@@ -44,11 +46,11 @@ final ChromeDevToolsService devToolsService = chromeService.createDevToolsServic
 final Page page = devToolsService.getPage()
 final Network network = devToolsService.getNetwork()
 
-List<Response> responses = new ArrayList<>()
+List<ResponseInspected> responses = new ArrayList<>()
 
 // log responses
 network.onResponseReceived({ event ->
-	Response resp = new Response(event.getResponse().getStatus(), new URL(event.getResponse().getUrl()), event.getResponse().getMimeType())
+	ResponseInspected resp = new ResponseInspected(event.getResponse().getStatus(), new URL(event.getResponse().getUrl()), event.getResponse().getMimeType())
 	println resp.toString()
 	responses.add(resp)
 })
@@ -65,7 +67,7 @@ network.onLoadingFinished({ event ->
 network.enable()
 
 // navigate to the site
-page.navigate(driver.getCurrentUrl())
+page.navigate(chrome.getCurrentUrl())
 
 // wait until the stream of responses ceaces
 for (;;) {
@@ -92,40 +94,5 @@ responses.each { resp ->
 		Metadata metadata = Metadata.builderWithUrl(resp.getUrl()).put("profile", profile).build()
 		Material mat = store.write(jobName, jobTimestamp, fileType, metadata, tempFile)
 		assert mat != null
-	}
-}
-
-
-/**
- * 
- */
-class Response {
-	
-	private final Integer status
-	private final URL url
-	private final String mimeType
-	
-	Response(Integer status, URL url, String mimeType) {
-		this.status = status
-		this.url = url
-		this.mimeType = mimeType
-	}
-	Integer getStatus() {
-		return this.status
-	}
-	URL getUrl() {
-		return this.url
-	}
-	String getMimeType() {
-		return this.mimeType
-	}
-	@Override
-	String toString() {
-		Map<String,String> m = new HashMap<>()
-		m.put("status", Integer.toString(getStatus()))
-		m.put("url", getUrl().toString())
-		m.put("mime-type", getMimeType())
-		Gson gson = new GsonBuilder().setPrettyPrinting().create()
-		return gson.toJson(m)
 	}
 }
