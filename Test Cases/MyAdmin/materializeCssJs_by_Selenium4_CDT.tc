@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>materializeCssJs_by_kklisura_CDT</name>
+   <name>materializeCssJs_by_Selenium4_CDT</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>8236e530-0dd7-43b4-ad34-c0cc148c7854</testCaseGuid>
+   <testCaseGuid>1e3d37b0-0aa8-4e48-98bb-763963bed7e8</testCaseGuid>
 </TestCaseEntity>

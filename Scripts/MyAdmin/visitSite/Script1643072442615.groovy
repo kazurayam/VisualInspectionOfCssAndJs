@@ -38,16 +38,27 @@ WebUI.callTestCase(findTestCase("MyAdmin/materializeScreenshot"),
 )
 
 // scrape for the CSS and JavaScript refered by the page and materialize them into the store
-WebUI.callTestCase(findTestCase("MyAdmin/materializeCssJs_by_kklisura_cdt"),
-	[
-		"driver": DriverFactory.getWebDriver(),
-		"store": store,
-		"jobName": jobName,
-		"jobTimestamp": jobTimestamp,
-		"profile": profile
-	]
-)
-
+if (GlobalVariable.visitSite_by_Selenium4_CDT) {
+	WebUI.callTestCase(findTestCase("MyAdmin/materializeCssJs_by_Selenium4_CDT"),
+		[
+			"driver": DriverFactory.getWebDriver(),
+			"store": store,
+			"jobName": jobName,
+			"jobTimestamp": jobTimestamp,
+			"profile": profile
+		]
+	)
+} else {
+	WebUI.callTestCase(findTestCase("MyAdmin/materializeCssJs_by_kklisura_CDT"),
+		[
+			"driver": DriverFactory.getWebDriver(),
+			"store": store,
+			"jobName": jobName,
+			"jobTimestamp": jobTimestamp,
+			"profile": profile
+		]
+	)
+}
 
 // we have done materializing the screenshot and the page source
 WebUI.closeBrowser()

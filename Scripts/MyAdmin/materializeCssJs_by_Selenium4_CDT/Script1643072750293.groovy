@@ -3,17 +3,16 @@ import java.nio.file.Path
 import java.time.Duration
 import java.time.LocalDateTime
 
-import com.github.kklisura.cdt.launch.ChromeLauncher
-import com.github.kklisura.cdt.protocol.commands.Network
-import com.github.kklisura.cdt.protocol.commands.Page
-import com.github.kklisura.cdt.services.ChromeDevToolsService
-import com.github.kklisura.cdt.services.ChromeService
-import com.github.kklisura.cdt.services.types.ChromeTab
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.kazurayam.materialstore.FileType
 import com.kazurayam.materialstore.Material
 import com.kazurayam.materialstore.Metadata
+import com.kms.katalon.core.webui.driver.DriverFactory
+
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.devtools.DevTools
+import org.openqa.selenium.devtools.v96.network.Network
 
 Objects.requireNonNull(driver)
 Objects.requireNonNull(store)
@@ -28,43 +27,35 @@ Objects.requireNonNull(profile)
  * save the files into the store directory
  */
 
-final ChromeLauncher launcher = new ChromeLauncher()
+// learnined https://rahulshettyacademy.com/blog/index.php/2021/11/04/selenium-4-key-feature-network-interception/#t-1636047172263
 
-// launch Chrome
-final ChromeService chromeService = launcher.launch(false)
+ChromeDriver chrome = (ChromeDriver)driver
 
-// create an emtpy tab, ie about:blank
-final ChromeTab tab = chromeService.createTab()
+DevTools devTool = chrome.getDevTools()
 
-// get DevTools service to this tab
-final ChromeDevToolsService devToolsService = chromeService.createDevToolsService(tab)
+devTool.createSession()
 
-// get indivisual commands
-final Page page = devToolsService.getPage()
-final Network network = devToolsService.getNetwork()
+devTool.send(Network.enable(Optional.empty(), Optional.empty(), Optonal.empty()))
 
 List<Response> responses = new ArrayList<>()
 
-// log responses
-network.onResponseReceived({ event ->
-	Response resp = new Response(event.getResponse().getStatus(), new URL(event.getResponse().getUrl()), event.getResponse().getMimeType())
-	println resp.toString()
-	responses.add(resp)
-})
-
-// watch the stream of responses.
-// when the stream stopped for longer than 2 seconds,
-// then the stream has possibly finished
 LocalDateTime lastResponseReceivedAt = LocalDateTime.now()
-network.onLoadingFinished({ event ->
+
+// log responses
+devTool.addListener(Network.responseReceived(), { responseReceived ->
+	Response res = new Response(
+		responseReceived.getStatus(),
+		new URL(responseReceived.getUrl()),
+		responseReceived.getMimeType().toString()
+	)
+	println res.toString()
+	responses.add(res)
+	//
 	lastResponseReceivedAt = LocalDateTime.now()
 })
 
-// Enable network events.
-network.enable()
-
-// navigate to the site
-page.navigate(driver.getCurrentUrl())
+// navigate to the site again
+chrome.navigate(driver.getCurrentUrl())
 
 // wait until the stream of responses ceaces
 for (;;) {
@@ -76,9 +67,6 @@ for (;;) {
 	}
 	Thread.sleep(250)
 }
-
-// now close the Chrome browser
-devToolsService.waitUntilClosed();
 
 responses.each { resp ->
 	if (resp.getStatus() == 200) {

@@ -2,7 +2,7 @@
 
 // $ gradle drivers
 
-version = '0.2.0'
+version = '0.3.0-SNAPSHOT'
 
 ext {
     AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
@@ -12,7 +12,7 @@ ext {
     javadiffutilsVersion = '4.9'
     jsoupVersion = '1.7.2'
     cdtjavaclientVersion = '4.0.0'
-
+    seleniumdevtoolsv96Version = '4.1.1'
 }
 
 repositories {
@@ -37,6 +37,8 @@ dependencies {
 
     myconf group: 'com.github.kklisura.cdt', name: 'cdt-java-client',
         version: "${cdtjavaclientVersion}"
+    myconf group: 'org.seleniumhq.selenium', name: 'selenium-devtools-v96', 
+        version: "${seleniumdevtoolsv96Version}"
 }
 
 task drivers {
@@ -56,7 +58,8 @@ task drivers {
                     "**/ashot*.jar",
                     "**/jsoup*.jar",
                     "**/java-diff-utils*.jar",
-                    "**/cdt-java-client*.jar"
+                    "**/cdt-java-client*.jar",
+                    "**/selenium-devtools-v96*.jar"
                     )
                 .rename({ s ->
                     AUTO_IMPORTED_JAR_PREFIX + s
