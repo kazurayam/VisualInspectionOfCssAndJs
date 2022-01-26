@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' /><!-- Bootstrap -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We' crossorigin='anonymous' />
+    <style>.container {
+  font-family: ui-monospace, SFMono-Regular, SZ Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 12px;
+  line-height: 20px;
+}
+.container dl dd {
+  margin-left: 40px;
+}
+.container .title button {
+  float: right;
+  margin-top: 6px;
+}
+.container .header {
+  padding: 16px 20px;
+}
+.container .ignoring-key {
+  background-color: #CCC;
+}
+.container .matched-value {
+  background-color: #98FB98;
+}
+.container .accordion .accordion-header button .ratio {
+  padding: 4px 20px 4px 4px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  flex-basis: 10%;
+}
+.container .accordion .accordion-header button .fileType {
+  padding: 4px 20px 4px 4px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  flex-basis: 10%;
+}
+.container .accordion .accordion-header button .metadata {
+  padding: 4px 20px 4px 4px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  flex-basis: 90%;
+}
+.container .accordion .accordion-header button .description {
+  padding: 4px 20px 4px 4px;
+  text-align: left;
+  font-size: 16px;
+  line-height: 24px;
+  flex-basis: 80%;
+}
+.container .accordion .accordion-header button .warning {
+  background-color: #e0ae00;
+}
+.container .accordion .accordion-body .show-diff .modal .modal-body iframe {
+  position: absolute;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+.container .accordion .accordion-body .show-diff .modal .modal-body .carousel .carousel-inner {
+  background-color: #efefef;
+}
+.container .accordion .accordion-body .show-diff .modal .modal-body .carousel .carousel-inner .centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.container .accordion .accordion-body .show-diff .modal .modal-body .carousel .carousel-control-prev, .container .accordion .accordion-body .show-diff .modal .modal-body .carousel .carousel-control-next {
+  width: 12.5%;
+}
+.container .accordion .accordion-body .show-detail {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/*# sourceMappingURL=style.css.map */
+</style>
+    <title>MyAdmin_visual_inspection_twins</title>
+  </head>
+  <body>
+    <div class='container'>
+      <h1 class='title'>MyAdmin_visual_inspection_twins
+        <button class='btn btn-secondary' type='button' data-bs-toggle='collapse' data-bs-target='#collapsingHeader' aria-expanded='false' aria-controls='collapsingHeader'>About</button>
+      </h1>
+      <div id='collapsingHeader' class='collapse header'>
+        <dl>
+          <dt>Root path :</dt>
+          <dd>/Users/kazuakiurayama/katalon-workspace/VisualInspectionOfCssAndJs/store</dd>
+          <dt>JobName :</dt>
+          <dd>MyAdmin_visual_inspection_twins</dd>
+          <dt>Left MaterialList specification</dt>
+          <dd>
+            <dl>
+              <dt>JobTimestamp :</dt>
+              <dd>20220126_220136</dd>
+              <dt>MetadataPattern :</dt>
+              <dd>
+                <span>{</span>
+                <span>"profile":</span>
+                <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                <span>}</span>
+              </dd>
+              <dt>FileType :</dt>
+              <dd>not specified</dd>
+            </dl>
+          </dd>
+          <dt>Right MaterialList specification</dt>
+          <dd>
+            <dl>
+              <dt>JobTimestamp :</dt>
+              <dd>20220126_220156</dd>
+              <dt>MetadataPattern :</dt>
+              <dd>
+                <span>{</span>
+                <span>"profile":</span>
+                <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                <span>}</span>
+              </dd>
+              <dt>FileType :</dt>
+              <dd>not specified</dd>
+            </dl>
+          </dd>
+          <dt>IgnoringMetadataKeys</dt>
+          <dd>
+            <span>{</span>
+            <span class='ignoring-key'>"URL.host"</span>
+            <span>, </span>
+            <span class='ignoring-key'>"profile"</span>
+            <span>}</span>
+          </dd>
+        </dl>
+      </div>
+      <div class='accordion' id='diff-contents'>
+        <div id='accordion1' class='accordion-item'>
+          <h2 id='heading1' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse1' area-expanded='false' aria-controls='collapse1'>
+              <span class='ratio warning'>10.80%</span>
+              <span class='fileType'>css</span>
+              <span class='description'>{"URL.path":"/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css", "URL.port":"80", "URL.protocol":"https"}</span>
+            </button>
+          </h2>
+          <div id='collapse1' class='according-collapse collapse' aria-labelledby='heading1' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff'><!-- Button trigger modal -->
+                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#textModal1'>Show diff in Modal</button><!-- Modal to show texts diff -->
+                <div class='modal fade' id='textModal1' tabindex='-1' aria-labelledby='textModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog modal-fullscreen'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='textModalLabel1'>
+                          <span>{"URL.path":"/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css", "URL.port":"80", "URL.protocol":"https"} css 10.80%%</span>
+                          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                        </h5>
+                      </div>
+                      <div class='modal-body'><!-- body -->
+                        <iframe src='MyAdmin_visual_inspection_twins/20220126_220156/objects/4c2502854bbc5defa960ad2604c46b46c709eb40.html' title='TextDiff'></iframe>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/1865dddcbb7b67dcef4250e590cc9a9574aba673.css' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/1865dddcbb7b67dcef4250e590cc9a9574aba673.css</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>css</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/81a66a9eb2de9cb0ace01bf25d52b376b858e960.css' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/81a66a9eb2de9cb0ace01bf25d52b376b858e960.css</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>css</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/4c2502854bbc5defa960ad2604c46b46c709eb40.html' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/4c2502854bbc5defa960ad2604c46b46c709eb40.html</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>html</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"1865dddcbb7b67dcef4250e590cc9a9574aba673"</span>
+                    <span>, </span>
+                    <span>"ratio":</span>
+                    <span>"10.80%"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"81a66a9eb2de9cb0ace01bf25d52b376b858e960"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion2' class='accordion-item'>
+          <h2 id='heading2' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse2' area-expanded='false' aria-controls='collapse2'>
+              <span class='ratio '>no diff</span>
+              <span class='fileType'>woff2</span>
+              <span class='description'>{"URL.path":"/npm/bootstrap-icons@1.5.0/font/fonts/bootstrap-icons.woff2", "URL.port":"80", "URL.protocol":"https", "URL.query":"856008caa5eb66df68595e734e59580d"}</span>
+            </button>
+          </h2>
+          <div id='collapse2' class='according-collapse collapse' aria-labelledby='heading2' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff' />
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/4649877868a0068ce50b105d0d2a235e8010c98f.woff2' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/4649877868a0068ce50b105d0d2a235e8010c98f.woff2</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>woff2</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap-icons@1.5.0/font/fonts/bootstrap-icons.woff2"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span>"URL.query":</span>
+                    <span>"856008caa5eb66df68595e734e59580d"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='_/_/objects/0000000000000000000000000000000000000000.' target='right'>_/_/objects/0000000000000000000000000000000000000000.</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd></dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='_/_/objects/511a6735c8ceebad4476cca33b5b9bee2ffbbbb2.txt' target='diff'>_/_/objects/511a6735c8ceebad4476cca33b5b9bee2ffbbbb2.txt</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>txt</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"4649877868a0068ce50b105d0d2a235e8010c98f"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"0000000000000000000000000000000000000000"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion3' class='accordion-item'>
+          <h2 id='heading3' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse3' area-expanded='false' aria-controls='collapse3'>
+              <span class='ratio '>0.00%</span>
+              <span class='fileType'>css</span>
+              <span class='description'>{"URL.path":"/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css", "URL.port":"80", "URL.protocol":"https"}</span>
+            </button>
+          </h2>
+          <div id='collapse3' class='according-collapse collapse' aria-labelledby='heading3' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff'><!-- Button trigger modal -->
+                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#textModal3'>Show diff in Modal</button><!-- Modal to show texts diff -->
+                <div class='modal fade' id='textModal3' tabindex='-1' aria-labelledby='textModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog modal-fullscreen'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='textModalLabel3'>
+                          <span>{"URL.path":"/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css", "URL.port":"80", "URL.protocol":"https"} css 0.00%%</span>
+                          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                        </h5>
+                      </div>
+                      <div class='modal-body'><!-- body -->
+                        <iframe src='MyAdmin_visual_inspection_twins/20220126_220156/objects/e5c40dfa85a752f830de059ae18e3b101fced4b5.html' title='TextDiff'></iframe>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/396f51b333ff6f0926f6e67ad6e6c9c69bea7b31.css' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/396f51b333ff6f0926f6e67ad6e6c9c69bea7b31.css</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>css</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/396f51b333ff6f0926f6e67ad6e6c9c69bea7b31.css' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/396f51b333ff6f0926f6e67ad6e6c9c69bea7b31.css</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>css</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/e5c40dfa85a752f830de059ae18e3b101fced4b5.html' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/e5c40dfa85a752f830de059ae18e3b101fced4b5.html</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>html</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"396f51b333ff6f0926f6e67ad6e6c9c69bea7b31"</span>
+                    <span>, </span>
+                    <span>"ratio":</span>
+                    <span>"0.00%"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"396f51b333ff6f0926f6e67ad6e6c9c69bea7b31"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion4' class='accordion-item'>
+          <h2 id='heading4' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse4' area-expanded='false' aria-controls='collapse4'>
+              <span class='ratio '>0.00%</span>
+              <span class='fileType'>js</span>
+              <span class='description'>{"URL.path":"/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js", "URL.port":"80", "URL.protocol":"https"}</span>
+            </button>
+          </h2>
+          <div id='collapse4' class='according-collapse collapse' aria-labelledby='heading4' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff'><!-- Button trigger modal -->
+                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#textModal4'>Show diff in Modal</button><!-- Modal to show texts diff -->
+                <div class='modal fade' id='textModal4' tabindex='-1' aria-labelledby='textModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog modal-fullscreen'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='textModalLabel4'>
+                          <span>{"URL.path":"/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js", "URL.port":"80", "URL.protocol":"https"} js 0.00%%</span>
+                          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                        </h5>
+                      </div>
+                      <div class='modal-body'><!-- body -->
+                        <iframe src='MyAdmin_visual_inspection_twins/20220126_220156/objects/3f6aa79601ae78aaf4ff9e4f40bc2c592ef5c24a.html' title='TextDiff'></iframe>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/f52210379974496514e24aeb07ecb6ef259063f6.js' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/f52210379974496514e24aeb07ecb6ef259063f6.js</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>js</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/f52210379974496514e24aeb07ecb6ef259063f6.js' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/f52210379974496514e24aeb07ecb6ef259063f6.js</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>js</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/3f6aa79601ae78aaf4ff9e4f40bc2c592ef5c24a.html' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/3f6aa79601ae78aaf4ff9e4f40bc2c592ef5c24a.html</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>html</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"f52210379974496514e24aeb07ecb6ef259063f6"</span>
+                    <span>, </span>
+                    <span>"ratio":</span>
+                    <span>"0.00%"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"f52210379974496514e24aeb07ecb6ef259063f6"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion5' class='accordion-item'>
+          <h2 id='heading5' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse5' area-expanded='false' aria-controls='collapse5'>
+              <span class='ratio warning'>100.00%</span>
+              <span class='fileType'>js</span>
+              <span class='description'>{"URL.path":"/ajax/libs/jquery/1.12.4/jquery.min.js", "URL.port":"80", "URL.protocol":"https"}</span>
+            </button>
+          </h2>
+          <div id='collapse5' class='according-collapse collapse' aria-labelledby='heading5' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff'><!-- Button trigger modal -->
+                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#textModal5'>Show diff in Modal</button><!-- Modal to show texts diff -->
+                <div class='modal fade' id='textModal5' tabindex='-1' aria-labelledby='textModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog modal-fullscreen'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='textModalLabel5'>
+                          <span>{"URL.path":"/ajax/libs/jquery/1.12.4/jquery.min.js", "URL.port":"80", "URL.protocol":"https"} js 100.00%%</span>
+                          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                        </h5>
+                      </div>
+                      <div class='modal-body'><!-- body -->
+                        <iframe src='MyAdmin_visual_inspection_twins/20220126_220156/objects/c667628842a756cc0ddc1006e15f905a5e7edcce.html' title='TextDiff'></iframe>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/37b1db88b57438f1072a8ebc7559c909c9d3a682.js' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/37b1db88b57438f1072a8ebc7559c909c9d3a682.js</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>js</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdnjs.cloudflare.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/ajax/libs/jquery/1.11.3/jquery.min.js"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/5a9dcfbef655a2668e78baebeaa8dc6f41d8dabb.js' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/5a9dcfbef655a2668e78baebeaa8dc6f41d8dabb.js</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>js</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdnjs.cloudflare.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/ajax/libs/jquery/1.12.4/jquery.min.js"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/c667628842a756cc0ddc1006e15f905a5e7edcce.html' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/c667628842a756cc0ddc1006e15f905a5e7edcce.html</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>html</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"37b1db88b57438f1072a8ebc7559c909c9d3a682"</span>
+                    <span>, </span>
+                    <span>"ratio":</span>
+                    <span>"100.00%"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"5a9dcfbef655a2668e78baebeaa8dc6f41d8dabb"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion6' class='accordion-item'>
+          <h2 id='heading6' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse6' area-expanded='false' aria-controls='collapse6'>
+              <span class='ratio warning'>25.32%</span>
+              <span class='fileType'>html</span>
+              <span class='description'>{"URL.path":"/", "URL.port":"80", "URL.protocol":"http"}</span>
+            </button>
+          </h2>
+          <div id='collapse6' class='according-collapse collapse' aria-labelledby='heading6' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff'><!-- Button trigger modal -->
+                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#textModal6'>Show diff in Modal</button><!-- Modal to show texts diff -->
+                <div class='modal fade' id='textModal6' tabindex='-1' aria-labelledby='textModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog modal-fullscreen'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='textModalLabel6'>
+                          <span>{"URL.path":"/", "URL.port":"80", "URL.protocol":"http"} html 25.32%%</span>
+                          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                        </h5>
+                      </div>
+                      <div class='modal-body'><!-- body -->
+                        <iframe src='MyAdmin_visual_inspection_twins/20220126_220156/objects/3191a5adb3a0216f70e183ca3f60f107deafb2b2.html' title='TextDiff'></iframe>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/311a0f81ada986a277cefa590cd31dfb709a669c.html' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/311a0f81ada986a277cefa590cd31dfb709a669c.html</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>html</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"myadmin.kazurayam.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"http"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/6ff41c46851a452648b55ea1849995c27a228152.html' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/6ff41c46851a452648b55ea1849995c27a228152.html</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>html</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"devadmin.kazurayam.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"http"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/3191a5adb3a0216f70e183ca3f60f107deafb2b2.html' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/3191a5adb3a0216f70e183ca3f60f107deafb2b2.html</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>html</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"311a0f81ada986a277cefa590cd31dfb709a669c"</span>
+                    <span>, </span>
+                    <span>"ratio":</span>
+                    <span>"25.32%"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"6ff41c46851a452648b55ea1849995c27a228152"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion7' class='accordion-item'>
+          <h2 id='heading7' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse7' area-expanded='false' aria-controls='collapse7'>
+              <span class='ratio warning'>12.79%</span>
+              <span class='fileType'>png</span>
+              <span class='description'>{"URL.path":"/", "URL.port":"80", "URL.protocol":"http"}</span>
+            </button>
+          </h2>
+          <div id='collapse7' class='according-collapse collapse' aria-labelledby='heading7' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff'><!-- Button trigger modal -->
+                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#imageModal7'>Show diff in Modal</button><!-- Modal to show 3 images: Left/Diff/Right -->
+                <div class='modal fade' id='imageModal7' tabindex='-1' aria-labelledby='imageModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog modal-fullscreen'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='imageModalLabel7'>
+                          <span>{"URL.path":"/", "URL.port":"80", "URL.protocol":"http"} png 12.79%%</span>
+                          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                        </h5>
+                      </div>
+                      <div class='modal-body'><!-- body -->
+                        <div id='carouselControl7' class='carousel slide' data-bs-ride='carousel'>
+                          <div class='carousel-inner'>
+                            <div class='carousel-item'>
+                              <h3 class='centered'>Left</h3>
+                              <img class='img-fluid d-block w-75 centered' alt='left' src='MyAdmin_visual_inspection_twins/20220126_220136/objects/c776e599c39bbac6eff8e3fde20ce533fa10acbd.png' />
+                            </div>
+                            <div class='carousel-item active'>
+                              <h3 class='centered'>Diff</h3>
+                              <img class='img-fluid d-block w-75 centered' alt='diff' src='MyAdmin_visual_inspection_twins/20220126_220156/objects/af179222f721471cdd4145afc9517bb4c3e1f139.png' />
+                            </div>
+                            <div class='carousel-item'>
+                              <h3 class='centered'>Right</h3>
+                              <img class='img-fluid d-block w-75 centered' alt='right' src='MyAdmin_visual_inspection_twins/20220126_220156/objects/f326a85fc6c7541a6d0bb5ad48db467f5f48998b.png' />
+                            </div>
+                          </div>
+                          <button class='carousel-control-prev' type='button' data-bs-target='#carouselControl7' data-bs-slide='prev'>
+                            <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+                            <span class='visually-hidden'>Previous</span>
+                          </button>
+                          <button class='carousel-control-next' type='button' data-bs-target='#carouselControl7' data-bs-slide='next'>
+                            <span class='carousel-control-next-icon' aria-hidden='true'></span>
+                            <span class='visually-hidden'>Next</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/c776e599c39bbac6eff8e3fde20ce533fa10acbd.png' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/c776e599c39bbac6eff8e3fde20ce533fa10acbd.png</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>png</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"myadmin.kazurayam.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"http"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/f326a85fc6c7541a6d0bb5ad48db467f5f48998b.png' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/f326a85fc6c7541a6d0bb5ad48db467f5f48998b.png</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>png</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"devadmin.kazurayam.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"http"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/af179222f721471cdd4145afc9517bb4c3e1f139.png' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/af179222f721471cdd4145afc9517bb4c3e1f139.png</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>png</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"c776e599c39bbac6eff8e3fde20ce533fa10acbd"</span>
+                    <span>, </span>
+                    <span>"ratio":</span>
+                    <span>"12.79%"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"f326a85fc6c7541a6d0bb5ad48db467f5f48998b"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion8' class='accordion-item'>
+          <h2 id='heading8' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse8' area-expanded='false' aria-controls='collapse8'>
+              <span class='ratio '>0.00%</span>
+              <span class='fileType'>jpg</span>
+              <span class='description'>{"URL.path":"/umineko-1960x1960.jpg", "URL.port":"80", "URL.protocol":"http"}</span>
+            </button>
+          </h2>
+          <div id='collapse8' class='according-collapse collapse' aria-labelledby='heading8' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff'><!-- Button trigger modal -->
+                <button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#imageModal8'>Show diff in Modal</button><!-- Modal to show 3 images: Left/Diff/Right -->
+                <div class='modal fade' id='imageModal8' tabindex='-1' aria-labelledby='imageModalLabel' aria-hidden='true'>
+                  <div class='modal-dialog modal-fullscreen'>
+                    <div class='modal-content'>
+                      <div class='modal-header'>
+                        <h5 class='modal-title' id='imageModalLabel8'>
+                          <span>{"URL.path":"/umineko-1960x1960.jpg", "URL.port":"80", "URL.protocol":"http"} jpg 0.00%%</span>
+                          <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                        </h5>
+                      </div>
+                      <div class='modal-body'><!-- body -->
+                        <div id='carouselControl8' class='carousel slide' data-bs-ride='carousel'>
+                          <div class='carousel-inner'>
+                            <div class='carousel-item'>
+                              <h3 class='centered'>Left</h3>
+                              <img class='img-fluid d-block w-75 centered' alt='left' src='MyAdmin_visual_inspection_twins/20220126_220136/objects/d0ecc09ff333e6051b12b21f97e63101dcbb877b.jpg' />
+                            </div>
+                            <div class='carousel-item active'>
+                              <h3 class='centered'>Diff</h3>
+                              <img class='img-fluid d-block w-75 centered' alt='diff' src='MyAdmin_visual_inspection_twins/20220126_220156/objects/f5f9ef7f7318bb01401fe9430b27b1a0c49b4008.png' />
+                            </div>
+                            <div class='carousel-item'>
+                              <h3 class='centered'>Right</h3>
+                              <img class='img-fluid d-block w-75 centered' alt='right' src='MyAdmin_visual_inspection_twins/20220126_220156/objects/d0ecc09ff333e6051b12b21f97e63101dcbb877b.jpg' />
+                            </div>
+                          </div>
+                          <button class='carousel-control-prev' type='button' data-bs-target='#carouselControl8' data-bs-slide='prev'>
+                            <span class='carousel-control-prev-icon' aria-hidden='true'></span>
+                            <span class='visually-hidden'>Previous</span>
+                          </button>
+                          <button class='carousel-control-next' type='button' data-bs-target='#carouselControl8' data-bs-slide='next'>
+                            <span class='carousel-control-next-icon' aria-hidden='true'></span>
+                            <span class='visually-hidden'>Next</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class='modal-footer'>
+                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220136/objects/d0ecc09ff333e6051b12b21f97e63101dcbb877b.jpg' target='left'>MyAdmin_visual_inspection_twins/20220126_220136/objects/d0ecc09ff333e6051b12b21f97e63101dcbb877b.jpg</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>jpg</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"myadmin.kazurayam.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/umineko-1960x1960.jpg"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"http"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_ProductionEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/d0ecc09ff333e6051b12b21f97e63101dcbb877b.jpg' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/d0ecc09ff333e6051b12b21f97e63101dcbb877b.jpg</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>jpg</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"devadmin.kazurayam.com"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/umineko-1960x1960.jpg"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"http"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/f5f9ef7f7318bb01401fe9430b27b1a0c49b4008.png' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/f5f9ef7f7318bb01401fe9430b27b1a0c49b4008.png</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>png</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"d0ecc09ff333e6051b12b21f97e63101dcbb877b"</span>
+                    <span>, </span>
+                    <span>"ratio":</span>
+                    <span>"0.00%"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"d0ecc09ff333e6051b12b21f97e63101dcbb877b"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='accordion9' class='accordion-item'>
+          <h2 id='heading9' class='accordion-header'>
+            <button class='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#collapse9' area-expanded='false' aria-controls='collapse9'>
+              <span class='ratio '>no diff</span>
+              <span class='fileType'>woff2</span>
+              <span class='description'>{"URL.path":"/npm/bootstrap-icons@1.7.2/font/fonts/bootstrap-icons.woff2", "URL.port":"80", "URL.protocol":"https", "URL.query":"30af91bf14e37666a085fb8a161ff36d"}</span>
+            </button>
+          </h2>
+          <div id='collapse9' class='according-collapse collapse' aria-labelledby='heading9' data-bs-parent='#diff-contents'>
+            <div class='accordion-body'>
+              <div class='show-diff' />
+              <div class='show-detail'>
+                <h2>left</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='_/_/objects/0000000000000000000000000000000000000000.' target='left'>_/_/objects/0000000000000000000000000000000000000000.</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd></dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>right</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/00150349e6ebdaf2628af9ea4e56d6b02dbda393.woff2' target='right'>MyAdmin_visual_inspection_twins/20220126_220156/objects/00150349e6ebdaf2628af9ea4e56d6b02dbda393.woff2</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>woff2</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span class='ignoring-key'>"URL.host":</span>
+                    <span>"cdn.jsdelivr.net"</span>
+                    <span>, </span>
+                    <span>"URL.path":</span>
+                    <span>"/npm/bootstrap-icons@1.7.2/font/fonts/bootstrap-icons.woff2"</span>
+                    <span>, </span>
+                    <span>"URL.port":</span>
+                    <span>"80"</span>
+                    <span>, </span>
+                    <span>"URL.protocol":</span>
+                    <span>"https"</span>
+                    <span>, </span>
+                    <span>"URL.query":</span>
+                    <span>"30af91bf14e37666a085fb8a161ff36d"</span>
+                    <span>, </span>
+                    <span class='ignoring-key'>"profile":</span>
+                    <span class='matched-value'>"MyAdmin_DevelopmentEnv"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class='show-detail'>
+                <h2>diff</h2>
+                <dl class='detail'>
+                  <dt>URL</dt>
+                  <dd>
+                    <a href='MyAdmin_visual_inspection_twins/20220126_220156/objects/a121070d19ee32fb9de66c0cc345af4805cb219a.txt' target='diff'>MyAdmin_visual_inspection_twins/20220126_220156/objects/a121070d19ee32fb9de66c0cc345af4805cb219a.txt</a>
+                  </dd>
+                  <dt>fileType</dt>
+                  <dd>txt</dd>
+                  <dt>metadata</dt>
+                  <dd>
+                    <span>{</span>
+                    <span>"category":</span>
+                    <span>"diff"</span>
+                    <span>, </span>
+                    <span>"left":</span>
+                    <span>"0000000000000000000000000000000000000000"</span>
+                    <span>, </span>
+                    <span>"right":</span>
+                    <span>"00150349e6ebdaf2628af9ea4e56d6b02dbda393"</span>
+                    <span>}</span>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- Bootstrap -->
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj' crossorigin='anonymous'></script>
+  </body>
+</html>
