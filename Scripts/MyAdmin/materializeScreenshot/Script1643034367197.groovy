@@ -11,11 +11,11 @@ import com.kazurayam.materialstore.Metadata
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+Objects.requireNonNull(chrome)
 Objects.requireNonNull(store)
 Objects.requireNonNull(jobName)
 Objects.requireNonNull(jobTimestamp)
-Objects.requireNonNull(metadata)
-assert metadata instanceof Metadata
+Objects.requireNonNull(profile)
 
 
 // take a screenshot and save the image into a temporary file using Katalon's built-in keyword
@@ -23,6 +23,8 @@ Path tempFile = Files.createTempFile(null, null);
 WebUI.takeFullPageScreenshot(tempFile.toAbsolutePath().toFile().toString(), [])
 
 // copy the image file into the materialstore
+URL url = new URL(chrome.getCurrentUrl())
+Metadata metadata = Metadata.builderWithUrl(url).put("profile", profile).build()
 Material image = store.write(jobName, jobTimestamp, FileType.PNG, metadata, tempFile)
 assert image != null
 

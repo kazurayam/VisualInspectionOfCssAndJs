@@ -36,12 +36,11 @@ URL url = new URL(WebUI.getUrl())
 // take the screensho using the Katalon keyword, save it into the store
 WebUI.callTestCase(findTestCase("MyAdmin/materializeScreenshot"),
 	[
+		"chrome": chrome,
 		"store": store,
 		"jobName": jobName,
 		"jobTimestamp": jobTimestamp,
-		"metadata": Metadata.builderWithUrl(url)
-									.put("profile", profile)
-									.build()
+		"profile": profile
 	]
 )
 

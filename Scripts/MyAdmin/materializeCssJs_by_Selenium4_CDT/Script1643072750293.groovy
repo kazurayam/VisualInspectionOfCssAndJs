@@ -72,7 +72,8 @@ for (;;) {
 
 
 responses.each { resp ->
-	if (resp.getStatus() == 200) {
+	if (resp != null && (200 <= resp.getStatus() && resp.getStatus() < 300)) {
+		
 		// download a resource from a URL to save into a temp file
 		Path tempFile = Files.createTempFile(null, null);
 		DownloadUtil.downloadWebResourceIntoFile(resp.getUrl(), tempFile)
