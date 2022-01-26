@@ -18,8 +18,9 @@ build
 settings
 .cache/
 
+.DS_Store
 
-
+*.zip
 
 Drivers
 store/
