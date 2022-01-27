@@ -1,3 +1,11 @@
+-   [Visual Inspection of CSS and JavaScript](#_visual_inspection_of_css_and_javascript)
+    -   [Problem to solve](#_problem_to_solve)
+    -   [Solution](#_solution)
+    -   [Description](#_description)
+        -   [How to run the demo](#_how_to_run_the_demo)
+        -   [How the test script is coded](#_how_the_test_script_is_coded)
+        -   [How the test works](#_how_the_test_works)
+
 # Visual Inspection of CSS and JavaScript
 
 @author kazurayam
@@ -61,7 +69,7 @@ You have 2 options.
 
 -   set the `GlobalVarible.visitSite_by_Selenium4_CDT` in the Execution Profile `default` with value of **true**.
 
-### How the test script is designed
+### How the test script is coded
 
 See the source codes of test cases:
 
@@ -78,3 +86,5 @@ I learned the following artiles to learn how to write programs that drive Chrome
 -   [kklisura’s sample code](https://github.com/kklisura/chrome-devtools-java-client/blob/master/cdt-examples/src/main/java/com/github/kklisura/cdt/examples/InterceptAndBlockUrlsExample.java)
 
 -   [Selenium 4 Key Feature: Network Interception, RAHUL SHETTY](https://rahulshettyacademy.com/blog/index.php/2021/11/04/selenium-4-key-feature-network-interception/)
+
+### How the test works

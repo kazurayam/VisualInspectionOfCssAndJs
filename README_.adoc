@@ -57,7 +57,7 @@ chrome-devtools-java-client]
 - will use https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v96[selenium-devtools-v96]
 - set the `GlobalVarible.visitSite_by_Selenium4_CDT` in the Execution Profile `default` with value of *true*.
 
-=== How the test script is designed
+=== How the test script is coded
 
 See the source codes of test cases:
 
@@ -70,3 +70,6 @@ I learned the following artiles to learn how to write programs that drive Chrome
 
 - https://github.com/kklisura/chrome-devtools-java-client/blob/master/cdt-examples/src/main/java/com/github/kklisura/cdt/examples/InterceptAndBlockUrlsExample.java[kklisura's sample code]
 - https://rahulshettyacademy.com/blog/index.php/2021/11/04/selenium-4-key-feature-network-interception/[Selenium 4 Key Feature: Network Interception, RAHUL SHETTY]
+
+=== How the test works
+
