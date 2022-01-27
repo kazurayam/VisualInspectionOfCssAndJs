@@ -30,7 +30,7 @@ This report includes the diff info of CSS and JS files distributed by jQuery and
 
 image::https://kazurayam.github.io/VisualInspectionOfCssAndJs/images/diff_bootstrap-icons.png[diff of bootstrap-icons CSS]
 
-Please imagine that now I am going to upgrade my web app to use the bootstrap-icons' jar from v1.5.0 to v1.7.2. In case when I find any visual differences between the old and the new, this diff info would help.
+Please imagine that now I am going to upgrade my web app to use the bootstrap-icons from v1.5.0 to v1.7.2. In case when I find any visual differences between the old and the new, this diff info would help.
 
 == Description
 
@@ -87,4 +87,4 @@ I learned the following artiles to learn how to write programs that drive Chrome
 * the script saves the resource files
 4. the script process the files and compile a report
 
-image::docs/puml/sequence.png[sequence]
+image::https://kazurayam.github.io/VisualInspectionOfCssAndJs/diagrams/out/sequence.png[sequence]
