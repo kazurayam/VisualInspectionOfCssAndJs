@@ -1,11 +1,3 @@
--   [Visual Inspection of CSS and JavaScript](#_visual_inspection_of_css_and_javascript)
-    -   [Problem to solve](#_problem_to_solve)
-    -   [Solution](#_solution)
-    -   [Description](#_description)
-        -   [How to run the demo](#_how_to_run_the_demo)
-        -   [How the test script is coded](#_how_the_test_script_is_coded)
-        -   [How the test works](#_how_the_test_works)
-
 # Visual Inspection of CSS and JavaScript
 
 @author kazurayam
@@ -87,4 +79,30 @@ I learned the following artiles to learn how to write programs that drive Chrome
 
 -   [Selenium 4 Key Feature: Network Interception, RAHUL SHETTY](https://rahulshettyacademy.com/blog/index.php/2021/11/04/selenium-4-key-feature-network-interception/)
 
-### How the test works
+### How the test script works
+
+1.  I start the [Test Cases/MyAdmin/MyAdmin\_visual\_inspection\_twins](./Scripts/MyAdmin/MyAdmin_visual_inspection_twins/Script1643034427943.groovy)
+
+2.  the script visits 2 web sites
+
+    -   <http://myadmin.kazurayam.com>
+
+    -   <http://devadmin.kazurayam.com>
+
+3.  for each sites, the script does the following
+
+    -   open Chrome browser
+
+    -   let the browser to visit the site URL
+
+    -   browser request HTML, CSS, JS, images etc to the site
+
+    -   the site responds to the requests from the browser
+
+    -   browser notifies the script of the `responseReceveied` events which includes HTTP Status (200 OK), the URL of the resource, the MIME-Type
+
+    -   when the event stream ceased, the script send HTTP GET requests to the original site for the source files of CSS and JS
+
+    -   the script saves the resource files, process them and compile a report
+
+![sequence](docs/puml/sequence.png)

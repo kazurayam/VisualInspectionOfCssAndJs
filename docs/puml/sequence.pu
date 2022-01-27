@@ -1,0 +1,26 @@
+@startuml sequence
+actor       Tester        as tester
+participant TestScript    as script
+participant Chrome        as browser
+database    MyAdmin       as site
+database    Bootstrap     as external
+tester   -> script     : run it
+script   -> browser    : nagivate to
+browser  -> site       : GET HTML
+site     -> browser    : respond HTML
+browser  -> script     : CDT responseReceived (status,URL,mimeType)
+browser  -> external   : GET CSS
+external -> browser    : respond CSS
+browser  -> script     : CDT responseReceived (status,URL,mimeType)
+browser  -> external   : GET JS
+external -> browser    : respond JS
+browser  -> script     : CDT responseReceived (status,URL,mimeType)
+script   -> site       : HTTP get URL of HTML
+site     -> script     : HTTP responce
+script   -> external   : HTTP get URL of CSS
+external -> script     : HTTP responce
+script   -> external   : HTTP get URL of JS
+external -> script     : HTTP responce
+script   -> script     : save, compare, report
+script   -> tester     : say done
+@enduml

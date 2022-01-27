@@ -7,7 +7,7 @@ Reports
 Libs
 
 output
-
+out/
 !output/.gitkeep
 build
 
