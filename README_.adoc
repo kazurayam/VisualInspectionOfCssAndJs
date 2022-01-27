@@ -87,4 +87,4 @@ I learned the following artiles to learn how to write programs that drive Chrome
 * the script saves the resource files
 4. the script process the files and compile a report
 
-image::https://kazurayam.github.io/VisualInspectionOfCssAndJs/diagrams/out/sequence.png[sequence]
+image::https://kazurayam.github.io/VisualInspectionOfCssAndJs/diagrams/out/sequence/sequence.png[Sequence diagram]

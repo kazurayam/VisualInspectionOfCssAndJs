@@ -107,4 +107,4 @@ I learned the following artiles to learn how to write programs that drive Chrome
 
 4.  the script process the files and compile a report
 
-![sequence](https://kazurayam.github.io/VisualInspectionOfCssAndJs/diagrams/out/sequence.png)
+![Sequence diagram](https://kazurayam.github.io/VisualInspectionOfCssAndJs/diagrams/out/sequence/sequence.png)
