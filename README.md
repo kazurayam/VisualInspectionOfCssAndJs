@@ -103,6 +103,8 @@ I learned the following artiles to learn how to write programs that drive Chrome
 
     -   when the event stream ceased, the script send HTTP GET requests to the original site for the source files of CSS and JS
 
-    -   the script saves the resource files, process them and compile a report
+    -   the script saves the resource files
+
+4.  the script process the files and compile a report
 
 ![sequence](docs/puml/sequence.png)

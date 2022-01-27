@@ -84,6 +84,7 @@ I learned the following artiles to learn how to write programs that drive Chrome
 * the site responds to the requests from the browser
 * browser notifies the script of the `responseReceveied` events which includes HTTP Status (200 OK), the URL of the resource, the MIME-Type
 * when the event stream ceased, the script send HTTP GET requests to the original site for the source files of CSS and JS
-* the script saves the resource files, process them and compile a report
+* the script saves the resource files
+4. the script process the files and compile a report
 
 image::docs/puml/sequence.png[sequence]
