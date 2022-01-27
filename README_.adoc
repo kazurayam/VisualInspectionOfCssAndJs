@@ -5,20 +5,42 @@
 
 == Problem to solve
 
-My previous project https://forum.katalon.com/t/visual-inspection-in-katalon-studio-reborn/57440[Visual Inspection in Katalon Studio -- Reborn] enabled to me to compare screenshots and HTML source files of web pages. It is really nice that I can see the diff information of HTML source files. It helps me to understand the reasons why the visual differences are found in the screenshots between the Production environment and the Development environment.
+My previous project https://forum.katalon.com/t/visual-inspection-in-katalon-studio-reborn/57440["Visual Inspection in Katalon Studio -- Reborn"] enabled to me to compare pages of a web site. It produces diff information of HTML source files. The HTML diff info helps me understanding the causes of the visual differences in the screenshot PNG images between 2 environment --- the Production env and the Development env.
 
-Half year passed after I released the "Visual Inspection" project, I realized that HTML is not enough. Any Web app consists of mainly 3 types of web resources: HTML, CSS, and JavaScript (JS). I want to see **the source of CSS and JavaScripts** that are referred by the web pages of my Application Under Test. And I want to see the diff information of CSS and JS as well.
+Half year has passed since I released the "Visual Inspection" project, I realized that HTML is not enough. Any web app consists of mainly 3 types of web resources: HTML, CSS, and JavaScript (JS). I want to see **the source of CSS and JavaScripts** that are referred by the web pages. And I want to see the diff information of CSS and JS as well.
 
-Let me tell you another story. Any web application depend on some external software products. For example, my application depends on https://jquery.com/[jQuery] and https://getbootstrap.com/[Bootstrap]. Once your web application is released for the production use, new releases of your dependent products will give you continuous pressure. You have to upgrade the products sometime in near future. It is a very scary task to upgrade the products. What are you fear for? You are scared that some changes of the external products may affects your web pages, and you can not predict what will happen. Therefore all you can do is to "look at as many pages of your web app as possible to find something unusual". I would call this activity *"Inspection"* rather than "Test".
-
-My "Visual Inspection" project would help you carry out this fearful task. However, jQuery and Bootstrap --- these are really a collection of CSS and JS. When I find something to investigate, I will need to look at the CSS & JS sources. So **I want to see the diff info of CSS and JS of jQuery & Bootstrap before/after the upgrade. Is it possible?**
+Let me tell you another story. Any web application depend on some external software products. For example, my application depends on https://jquery.com/[jQuery] and https://getbootstrap.com/[Bootstrap]. Once your web application is released for the production use, any new releases of the external dependencies will put continuous pressure on you. You have to upgrade them sometime in near future. However it is a scary task. Why? --- You are scared that some changes in the external dependencies may affect your web pages but you can not predict what will happen. Therefore all you can do is _to look at as many pages of your web app as possible looking for anything unusual_. I call this tiresome and boring activity as *"Visual Inspection"*. My "Visual Inspection" approach can automate it. However, jQuery and Bootstrap --- these are really a collection of CSS and JS files. When I find something to investigate, I would need to look at the CSS & JS sources. So **I want to see the diff info of CSS and JS of jQuery & Bootstrap before/after the upgrade. Is it possible?**
 
 == Solution
 
-I have updated the https://github.com/kazurayam/materialstore[materialstore] library to v0.1.10, which works behind the Visual Inspection project. Now it enables me to make diff information of CSS and JS.
+This project "Visual Inspection of CSS and JS" contains a demonstration link:Scripts/MyAdmin/MyAdmin_visual_inspection_twins/Script1643034427943.groovy[Test Cases/MyAdmin/MyAdmin_visual_inspection_twins] that compares 2 URLs:
+
+* http://myadmin.kazurayam.com 
+* http://devadmin.kazurayam.com
+
+It scrapes all the sources of HTML, CSS, JavaScript refered by the pages. The Test Case uses the [Chrome DevTools Protocol, Network Domain](https://chromedevtools.github.io/devtools-protocol/tot/Network/). It save the files, associate files as pairs, make diff, and compile a report in HTML format. A sample output is here:
+
+- https://kazurayam.github.io/VisualInspectionOfCssAndJs/demo/MyAdmin_visual_inspection_twins-index.html[Demo report]
+
+In this sample report, you can see the diff info of the CSS and JS fils distributed by the jQuery and Bootstrap project. For example, see the following link
+
+- https://kazurayam.github.io/VisualInspectionOfCssAndJs/demo/MyAdmin_visual_inspection_twins/20220126_220156/objects/4c2502854bbc5defa960ad2604c46b46c709eb40.html[CSS of the bootstrap-icons, v1.5.0 vs v1.7.2]
 
 == Description
 
-See the folloing report that were created by this "Visual Inspection of CSS and JS" project.
+=== Demo report
 
-- https://kazurayam.github.io/VisualInspectionOfCssAndJs/demo/MyAdmin_visual_inspection_twins-index.html[Demo report]
+See the following report that were created by this "Visual Inspection of CSS and JS" project.
+
+
+=== How to run the demo
+
+
+
+=== How is this project designed
+
+
+I have updated the https://github.com/kazurayam/materialstore[materialstore] library to v0.1.10. With it my 
+
+## Conclusion
+

@@ -3,19 +3,19 @@ import java.nio.file.Path
 import java.time.Duration
 import java.time.LocalDateTime
 
+import org.openqa.selenium.chrome.ChromeDriver
+
 import com.github.kklisura.cdt.launch.ChromeLauncher
 import com.github.kklisura.cdt.protocol.commands.Network
 import com.github.kklisura.cdt.protocol.commands.Page
 import com.github.kklisura.cdt.services.ChromeDevToolsService
 import com.github.kklisura.cdt.services.ChromeService
 import com.github.kklisura.cdt.services.types.ChromeTab
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
+import com.kazurayam.ks.visualinspection.DownloadUtil
+import com.kazurayam.ks.visualinspection.ResponseInspected
 import com.kazurayam.materialstore.FileType
 import com.kazurayam.materialstore.Material
 import com.kazurayam.materialstore.Metadata
-import com.kazurayam.ks.visualinspection.DownloadUtil
-import com.kazurayam.ks.visualinspection.ResponseInspected
 
 Objects.requireNonNull(chrome)
 assert chrome instanceof ChromeDriver

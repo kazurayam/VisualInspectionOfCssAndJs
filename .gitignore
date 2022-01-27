@@ -22,5 +22,8 @@ settings
 
 *.zip
 
-Drivers
+# intintionally include the external jars in the repository, for the convenience of those who does not know Gradle
+# Drivers/
+
+
 store/

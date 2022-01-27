@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>true</initValue>
+      <initValue>false</initValue>
       <name>visitSite_by_Selenium4_CDT</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
