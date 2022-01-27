@@ -1,4 +1,4 @@
-= Visual Inspection of CSS and JavaScript --- Sample report
+= docs/index
 
 - https://kazurayam.github.io/VisualInspectionOfCssAndJs/demo/MyAdmin_visual_inspection_twins-index.html[Demo result]
 - https://kazurayam.github.io/VisualInspectionOfCssAndJs/diagrams/out/sequence.png[Sequence diagram]
