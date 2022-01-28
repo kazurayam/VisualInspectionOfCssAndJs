@@ -5,7 +5,7 @@
 
 ## Problem to solve
 
-My previous project ["Visual Inspection in Katalon Studio — Reborn"](https://forum.katalon.com/t/visual-inspection-in-katalon-studio-reborn/57440) enabled to me to compare pages of a web site. It produces diff information of HTML source files. The HTML diff info helps me understanding the causes of the visual differences in the screenshot PNG images between 2 environment --- the Production env and the Development env.
+My previous project ["Visual Inspection in Katalon Studio — Reborn"](https://forum.katalon.com/t/visual-inspection-in-katalon-studio-reborn/57440) enabled to me to compare pages of a web site. It produces diff information of screenshots and HTML sources. The HTML diff info helps me understanding the causes of the visual differences in the screenshot PNG images between 2 environment --- the Production env and the Development env.
 
 Half year has passed since I released the "Visual Inspection" project, I realized that HTML is not enough. Any web app consists of mainly 3 types of web resources: HTML, CSS, and JavaScript (JS). I want to see **the source of CSS and JavaScripts** that are referred by the web pages. And I want to see the diff information of CSS and JS as well.
 

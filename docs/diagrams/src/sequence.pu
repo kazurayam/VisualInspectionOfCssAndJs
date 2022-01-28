@@ -1,6 +1,7 @@
 @startuml sequence
 actor       Tester        as tester
 participant TestScript    as script
+participant Materialstore as ms
 participant Chrome        as browser
 database    MyAdmin       as site
 database    Bootstrap     as external
@@ -21,6 +22,7 @@ script   -> external   : HTTP get URL of CSS
 external -> script     : HTTP responce
 script   -> external   : HTTP get URL of JS
 external -> script     : HTTP responce
-script   -> script     : save, compare, report
+script   -> ms         : save, compare, report
+ms       -> script     : done
 script   -> tester     : say done
 @enduml
