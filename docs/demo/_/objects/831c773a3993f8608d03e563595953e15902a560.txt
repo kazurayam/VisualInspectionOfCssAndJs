@@ -1,6 +1,0 @@
-Unable to take diff of binary files.
-
-left:  {"jobName":"MyAdmin_visual_inspection_twins","jobTimestamp":"20220127_101230","ID":"4649877868a0068ce50b105d0d2a235e8010c98f","fileType":"woff2","metadata":{"URL.host":"cdn.jsdelivr.net", "URL.path":"/npm/bootstrap-icons@1.5.0/font/fonts/bootstrap-icons.woff2", "URL.port":"80", "URL.protocol":"https", "URL.query":"856008caa5eb66df68595e734e59580d", "profile":"MyAdmin_ProductionEnv"}}
-
-right: {"jobName":"_","jobTimestamp":"_","ID":"0000000000000000000000000000000000000000","fileType":"","metadata":{}}
-
