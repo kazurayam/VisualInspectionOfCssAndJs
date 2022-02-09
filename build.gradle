@@ -2,12 +2,12 @@
 
 // $ gradle drivers
 
-version = '0.3.0'
+version = '0.3.1'
 
 ext {
     AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
     ExecutionProfilesLoaderVersion = "1.2.1"
-    materialstoreVersion = '0.1.10'
+    materialstoreVersion = '0.1.12'
     ashotVersion = '1.5.4'
     javadiffutilsVersion = '4.9'
     jsoupVersion = '1.7.2'
@@ -37,7 +37,7 @@ dependencies {
 
     myconf group: 'com.github.kklisura.cdt', name: 'cdt-java-client',
         version: "${cdtjavaclientVersion}"
-    myconf group: 'org.seleniumhq.selenium', name: 'selenium-devtools-v96', 
+    myconf group: 'org.seleniumhq.selenium', name: 'selenium-devtools-v96',
         version: "${seleniumdevtoolsv96Version}"
 }
 

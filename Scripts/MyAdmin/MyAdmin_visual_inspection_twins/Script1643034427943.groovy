@@ -6,6 +6,7 @@ import java.nio.file.Paths
 
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
 import com.kazurayam.materialstore.DiffArtifacts
+import com.kazurayam.materialstore.IdentifyMetadataValues
 import com.kazurayam.materialstore.IgnoringMetadataKeys
 import com.kazurayam.materialstore.JobName
 import com.kazurayam.materialstore.JobTimestamp
@@ -64,8 +65,12 @@ MaterialList right = store.select(jobName, timestampD,
 // difference greater than the criteria should be warned
 double criteria = 0.0d
 
-// make DiffArtifacts
-DiffArtifacts stuffedDiffArtifacts = store.makeDiff(left, right, IgnoringMetadataKeys.of("profile", "URL.host"))
+// compare 2 MaterialList objects, generate the diff information
+DiffArtifacts stuffedDiffArtifacts = 
+	store.makeDiff(left, right, 
+		IgnoringMetadataKeys.of("profile", "URL.host"),
+		IdentifyMetadataValues.by(["URL.query": "\\w{32}"]))
+
 int warnings = stuffedDiffArtifacts.countWarnings(criteria)
 
 // compile HTML report
