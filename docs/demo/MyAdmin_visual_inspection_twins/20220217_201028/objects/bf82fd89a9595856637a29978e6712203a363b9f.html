@@ -1,0 +1,1159 @@
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <title>TextDifferToHTML output</title>
+    <style>
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: ui-monospace,SFMono-Regular,SZ Mono,
+        Menlo,Consolas,Liberation Mono,monospace;
+    font-size: 12px;
+    line-height: 20px;
+}
+div#container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+td, th {
+    font-size: 12px;
+    border-right: 1px solid #ccc;
+    display: table-cell;
+}
+th {
+    border-bottom: 1px solid #ccc;
+}
+.blob-code-inner {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+.code-change {
+    background-color: #dbedff;
+}
+.code-delete {
+    background-color: #ffeef0;
+}
+.code-equal {
+    background-color: #ffffff;
+}
+.code-insert {
+    background-color: #e6ffec;
+}
+.deletion {
+    background-color: #ffdce0;
+}
+.insertion {
+    background-color: #ccffd8;
+}
+</style>
+  </head>
+  <body>
+    <div id='container'>
+      <div id='inputs'>
+        <h2>Left</h2>
+        <dl>
+          <dt>URL</dt>
+          <dd>
+            <a href='../../../MyAdmin_visual_inspection_twins/20220217_201004/objects/75f6fc61a4a7beced95470f5ae881e533c3a2d8f.html' target='Left'>MyAdmin_visual_inspection_twins/20220217_201004/objects/75f6fc61a4a7beced95470f5ae881e533c3a2d8f.html</a>
+          </dd>
+          <dt>metadata</dt>
+          <dd>{"URL.host":"myadmin.kazurayam.com", "URL.path":"/", "URL.port":"80", "URL.protocol":"http", "profile":"MyAdmin_ProductionEnv"}</dd>
+        </dl>
+        <h2>Right</h2>
+        <dl>
+          <dt>URL</dt>
+          <dd>
+            <a href='../../../MyAdmin_visual_inspection_twins/20220217_201028/objects/5d7e467a45a85329612d1f0694f9d726bc14226d.html' target='Right'>MyAdmin_visual_inspection_twins/20220217_201028/objects/5d7e467a45a85329612d1f0694f9d726bc14226d.html</a>
+          </dd>
+          <dt>metadata</dt>
+          <dd>{"URL.host":"devadmin.kazurayam.com", "URL.path":"/", "URL.port":"80", "URL.protocol":"http", "profile":"MyAdmin_DevelopmentEnv"}</dd>
+        </dl>
+      </div>
+      <div id='decision'>
+        <h3>
+          <span>are DIFFERENT</span>
+          <span style='margin-left: 20px;'>25.32%%</span>
+        </h3>
+        <dl>
+          <dt>rows</dt>
+          <dd>
+            <ul id='rows-stats'>
+              <li>
+                <span>total :</span>
+                <span>79</span>
+              </li>
+              <li>
+                <span class='code-insert'>inserted :</span>
+                <span class='code-insert'>4</span>
+              </li>
+              <li>
+                <span class='code-delete'>deleted :</span>
+                <span class='code-delete'>1</span>
+              </li>
+              <li>
+                <span class='code-change'>changed :</span>
+                <span class='code-change'>15</span>
+              </li>
+              <li>
+                <span>equal :</span>
+                <span>59</span>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+      </div>
+      <table id='split-diff'>
+        <colgroup>
+          <col width='44' />
+          <col />
+          <col />
+        </colgroup>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Left</th>
+            <th>Right</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class='code-equal'>1</th>
+            <td class='code-equal'>
+              <span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>&lt;!doctype html&gt;</span>
+            </span>
+          </span>
+        </td>
+        <td class='code-equal'>
+          <span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>&lt;!doctype html&gt;</span>
+        </span>
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <th class='code-equal'>2</th>
+    <td class='code-equal'>
+      <span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>&lt;html lang="ja"&gt;</span>
+    </span>
+  </span>
+</td>
+<td class='code-equal'>
+  <span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>&lt;html lang="ja"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>3</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;head&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;head&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>4</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;meta charset="utf-8"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;meta charset="utf-8"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>5</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>6</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>7</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>8</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>9</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.</span><span class='deletion'>5</span><span class='unchanged'>.</span><span class='deletion'>0</span><span class='unchanged'>/font/bootstrap-icons.css"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.</span><span class='insertion'>7</span><span class='unchanged'>.</span><span class='insertion'>2</span><span class='unchanged'>/font/bootstrap-icons.css"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>10</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>11</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;title&gt;My Admin&lt;/title&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;title&gt;My Admin&lt;/title&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>12</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;/head&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;/head&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>13</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;body&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;body&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>14</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;header&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;header&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>15</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        &lt;nav class="navbar navbar-expand-md navbar-dark bg-primary"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        &lt;nav class="navbar navbar-expand-md navbar-dark bg-primary"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>16</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;div class="container-fluid"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;div class="container-fluid"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>17</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;a class="navbar-brand" href="#"&gt;My Admin&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;a class="navbar-brand" href="#"&gt;My Admin&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>18</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>19</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>20</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;/button&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;/button&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>21</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;div class="collapse navbar-collapse" id="navbarNav"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>22</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;ul class="navbar-nav"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;ul class="navbar-nav"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>23</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;li class="nav-item"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;li class="nav-item"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>24</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a class="nav-link active" aria-current="page" href="#"&gt;Home&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>25</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;/li&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;/li&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>26</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;li class="nav-item"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;li class="nav-item"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>27</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a class="nav-link" href="#"&gt;News&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a class="nav-link" href="#"&gt;News&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>28</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;/li&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                  &lt;/li&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-insert'>29</th>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='insertion'>                  &lt;li class="nav-item"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-insert'>30</th>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='insertion'>                    &lt;a class="nav-link" href="#"&gt;Docs&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-insert'>31</th>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='insertion'>                  &lt;/li&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>32</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;/ul&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;/ul&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>33</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>              &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>34</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>35</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>          &lt;/nav&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>          &lt;/nav&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>36</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/header&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/header&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>37</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;div class="container mt-5"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;div class="container mt-5"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>38</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        &lt;section class="row"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        &lt;section class="row"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>39</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;section class="col-md-4 mb-5"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;section class="col-md-4 mb-5"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>40</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;div class="list-group"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;div class="list-group"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-delete'>41</th>
+<td class='code-delete'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='deletion'>                    &lt;a href="#" class="list-group-item list-group-item-action active" aria-current="true"&gt;Profile&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-delete'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>42</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Access Stats&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Access Stats&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>43</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Settings&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;a href="#" class="list-group-item list-group-item-action"&gt;Settings&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-insert'>44</th>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'></span>
+</span>
+</span>
+</td>
+<td class='code-insert'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='insertion'>                    &lt;a href="#" class="list-group-item list-group-item-action active" aria-current="true"&gt;Profile&lt;/a&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>45</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>46</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;/section&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;/section&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>47</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;section class="col-md-8 text-center"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;section class="col-md-8 text-center"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>48</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;header class="border-bottom pb-2 mb-3 d-flex align-items-center"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;header class="border-bottom pb-2 mb-3 d-flex align-items-center"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>49</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;h1 class="fs-5 m-0"&gt;My Profile&lt;/h1&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;h1 class="fs-5 m-0"&gt;My Profile&lt;/h1&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>50</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;button type="button" class="btn btn-primary ms-auto"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;button type="button" class="btn btn-primary ms-auto"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>51</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                        &lt;i class="bi bi-envelope-fill me-1"&gt;&lt;/i&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                        &lt;i class="bi bi-envelope-fill me-1"&gt;&lt;/i&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>52</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;/button&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                    &lt;/button&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>53</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;/header&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;/header&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>54</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;p&gt;&lt;img src="umineko-1960x1960.jpg" alt="umineko" class="rounded-circle img-fluid ps-5 pe-5"&gt;&lt;/p&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;p&gt;&lt;img src="umineko-1960x1960.jpg" alt="umineko" class="rounded-circle img-fluid ps-5 pe-5"&gt;&lt;/p&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>55</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                </span><span class='deletion'>&lt;!-- </span><span class='unchanged'>&lt;h2&gt;&lt;span id="clock"&gt;&lt;/span&gt; UTC&lt;/h2&gt;</span><span class='deletion'> --&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                &lt;h2&gt;&lt;span id="clock"&gt;&lt;/span&gt; UTC&lt;/h2&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>56</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;/section&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>            &lt;/section&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>57</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        &lt;/section&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        &lt;/section&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>58</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/div&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>59</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;footer class="bg-secondary text-center text-light p-5 mt-5"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;footer class="bg-secondary text-center text-light p-5 mt-5"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>60</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        (c) kazurayam.com</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        (c) kazurayam.com</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>61</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/footer&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/footer&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>62</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>63</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/script&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;/script&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>64</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.</span><span class='deletion'>11</span><span class='unchanged'>.</span><span class='deletion'>3</span><span class='unchanged'>/jquery.js"&gt;&lt;/script&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.</span><span class='insertion'>12</span><span class='unchanged'>.</span><span class='insertion'>4</span><span class='unchanged'>/jquery.js"&gt;&lt;/script&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>65</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;script&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    &lt;script&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>66</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='deletion'>      </span><span class='unchanged'>/**</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='insertion'>        </span><span class='unchanged'>/**</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>67</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>       </span><span class='deletion'>* display the current timestamp in the format of "07:22:13"</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>         </span><span class='insertion'>* display the current timestamp in the format of "07:22:13"</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>68</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>       </span><span class='deletion'>*/</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>         </span><span class='insertion'>*/</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>69</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>      </span><span class='deletion'>$(document).ready(function() {</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        </span><span class='insertion'>$(document).ready(function() {</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>70</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        </span><span class='deletion'>var m = new Date();</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>          </span><span class='insertion'>var m = new Date();</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>71</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        </span><span class='deletion'>var dateString = m.getUTCFullYear() +"/"+ (m.getUTCMonth()+1) +"/"+</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>          </span><span class='insertion'>var dateString = m.getUTCFullYear() +"/"+ (m.getUTCMonth()+1) +"/"+</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>72</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                         </span><span class='deletion'>m.getUTCDate() + " " + m.getUTCHours() + ":" +</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                           </span><span class='insertion'>m.getUTCDate() + " " + m.getUTCHours() + ":" +</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>73</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                        </span><span class='deletion'>m.getUTCMinutes() + ":" + m.getUTCSeconds();</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>                          </span><span class='insertion'>m.getUTCMinutes() + ":" + m.getUTCSeconds();</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>74</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        </span><span class='deletion'>console.log(dateString)</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>          </span><span class='insertion'>console.log(dateString)</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>75</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        </span><span class='deletion'>$('#clock').text(dateString);</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>          </span><span class='insertion'>$('#clock').text(dateString);</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>76</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>      </span><span class='deletion'>})</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>        </span><span class='insertion'>})</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-change'>77</th>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>    </span><span class='deletion'>&lt;/script&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-change'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>      </span><span class='insertion'>&lt;/script&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>78</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;/body&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>  &lt;/body&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+<tr>
+<th class='code-equal'>79</th>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>&lt;/html&gt;</span>
+</span>
+</span>
+</td>
+<td class='code-equal'>
+<span class='blob-code-inner'><span class='blob-code-inner'><span class='unchanged'>&lt;/html&gt;</span>
+</span>
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
