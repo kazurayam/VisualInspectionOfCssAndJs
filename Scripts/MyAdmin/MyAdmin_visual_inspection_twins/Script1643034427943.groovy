@@ -68,8 +68,8 @@ double criteria = 0.0d
 // compare 2 MaterialList objects, generate the diff information
 DiffArtifacts stuffedDiffArtifacts = 
 	store.makeDiff(left, right, 
-		IgnoringMetadataKeys.of("profile", "URL.host"),
-		IdentifyMetadataValues.by(["URL.query": "\\w{32}"]))
+		IgnoringMetadataKeys.of("profile"),
+		IdentifyMetadataValues.by(["URL.query": "\\w{32}", "URL.host": "(my|dev)admin.kazurayam.com"]))
 
 int warnings = stuffedDiffArtifacts.countWarnings(criteria)
 
