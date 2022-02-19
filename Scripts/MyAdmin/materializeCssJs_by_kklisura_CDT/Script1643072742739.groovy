@@ -13,9 +13,9 @@ import com.github.kklisura.cdt.services.ChromeService
 import com.github.kklisura.cdt.services.types.ChromeTab
 import com.kazurayam.ks.visualinspection.DownloadUtil
 import com.kazurayam.ks.visualinspection.ResponseInspected
-import com.kazurayam.materialstore.FileType
-import com.kazurayam.materialstore.Material
-import com.kazurayam.materialstore.Metadata
+import com.kazurayam.materialstore.filesystem.FileType
+import com.kazurayam.materialstore.filesystem.Material
+import com.kazurayam.materialstore.metadata.Metadata
 
 Objects.requireNonNull(chrome)
 assert chrome instanceof ChromeDriver

@@ -5,15 +5,14 @@ import java.nio.file.Path
 import java.nio.file.Paths
 
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
-import com.kazurayam.materialstore.DiffArtifacts
-import com.kazurayam.materialstore.IdentifyMetadataValues
-import com.kazurayam.materialstore.IgnoringMetadataKeys
-import com.kazurayam.materialstore.JobName
-import com.kazurayam.materialstore.JobTimestamp
-import com.kazurayam.materialstore.MaterialList
-import com.kazurayam.materialstore.MetadataPattern
-import com.kazurayam.materialstore.Store
-import com.kazurayam.materialstore.Stores
+import com.kazurayam.materialstore.diffartifact.DiffArtifactGroup
+import com.kazurayam.materialstore.filesystem.JobName
+import com.kazurayam.materialstore.filesystem.JobTimestamp
+import com.kazurayam.materialstore.filesystem.MaterialList
+import com.kazurayam.materialstore.metadata.MetadataPattern
+import com.kazurayam.materialstore.filesystem.Store
+import com.kazurayam.materialstore.filesystem.Stores
+import com.kazurayam.materialstore.MaterialstoreFacade
 import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -66,15 +65,18 @@ MaterialList right = store.select(jobName, timestampD,
 double criteria = 0.0d
 
 // compare 2 MaterialList objects, generate the diff information
-DiffArtifacts stuffedDiffArtifacts = 
-	store.makeDiff(left, right, 
-		IgnoringMetadataKeys.of("profile", "URL.protocol", "URL.port"),
-		IdentifyMetadataValues.by(["URL.query": "\\w{32}", "URL.host": "(my|dev)admin.kazurayam.com"]))
+DiffArtifactGroup prepared = 
+	DiffArtifactGroup.builder(left, right)
+		.ignoreKeys("profile", "URL.protocol", "URL.port")
+		.identifyWithRegex(["URL.query": "\\w{32}", "URL.host": "(my|dev)admin.kazurayam.com"])
+		.build()  
+MaterialstoreFacade facade = new MaterialstoreFacade(store)
+DiffArtifactGroup workedOut = facade.workOn(prepared)
 
-int warnings = stuffedDiffArtifacts.countWarnings(criteria)
+int warnings = workedOut.countWarnings(criteria)
 
 // compile HTML report
-Path reportFile = store.reportDiffs(jobName, stuffedDiffArtifacts, criteria, jobName.toString() + "-index.html")
+Path reportFile = store.reportDiffs(jobName, workedOut, criteria, jobName.toString() + "-index.html")
 assert Files.exists(reportFile)
 WebUI.comment("The report can be found ${reportFile.toString()}")
 
