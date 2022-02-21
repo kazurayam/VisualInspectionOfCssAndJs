@@ -26,8 +26,6 @@ It scrapes all the sources of HTML, CSS, JavaScript refered by the pages. The Te
 
 This report includes the diff info of CSS and JS files distributed by jQuery and Bootstrap. For example, see the following link. Please note that this link shows the difference of 2 versions of a single product: v1.5.0 and v1.7.2 of the https://icons.getbootstrap.com/[bootstrap-icons]. 
 
-- https://kazurayam.github.io/VisualInspectionOfCssAndJs/demo/MyAdmin_visual_inspection_twins/20220126_220156/objects/4c2502854bbc5defa960ad2604c46b46c709eb40.html[diff of bootstrap-icons CSS, v1.5.0 vs v1.7.2]
-
 image::https://kazurayam.github.io/VisualInspectionOfCssAndJs/images/diff_bootstrap-icons.png[diff of bootstrap-icons CSS]
 
 Please imagine that now I am going to upgrade my web app to use the bootstrap-icons from v1.5.0 to v1.7.2. In case when I find any visual differences between the old and the new, this diff info would help.

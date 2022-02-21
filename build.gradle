@@ -9,7 +9,7 @@ ext {
     ExecutionProfilesLoaderVersion = "1.2.1"
     materialstoreVersion = '0.3.3'
     ashotVersion = '1.5.4'
-    javadiffutilsVersion = '4.9'
+    javadiffutilsVersion = '4.9'gi
     jsoupVersion = '1.7.2'
     cdtjavaclientVersion = '4.0.0'
     seleniumdevtoolsv96Version = '4.1.1'
