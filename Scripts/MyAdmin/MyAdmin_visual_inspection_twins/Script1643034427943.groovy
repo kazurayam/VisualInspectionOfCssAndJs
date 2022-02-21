@@ -61,14 +61,15 @@ MaterialList right = store.select(jobName, timestampD,
 			MetadataPattern.builderWithMap([ "profile": profile2 ]).build()
 			)
 
-MaterialstoreFacade facade = new MaterialstoreFacade(store)
+MaterialstoreFacade facade = MaterialstoreFacade.newInstance(store)
 			
 // compare 2 MaterialList objects, generate the diff information
 ArtifactGroup prepared = 
 	ArtifactGroup.builder(left, right)
 		.ignoreKeys("profile", "URL.protocol", "URL.port")
 		.identifyWithRegex(["URL.query": "\\w{32}", "URL.host": "(my|dev)admin.kazurayam.com"])
-		.build()  
+		.build()
+
 ArtifactGroup workedOut = facade.workOn(prepared)
 
 // difference greater than the criteria should be warned
@@ -76,7 +77,7 @@ double criteria = 0.0d
 int warnings = workedOut.countWarnings(criteria)
 
 // compile HTML report
-Path reportFile = store.reportDiffs(jobName, workedOut, criteria, jobName.toString() + "-index.html")
+Path reportFile = facade.reportArtifactGroup(jobName, workedOut, criteria, jobName.toString() + "-index.html")
 assert Files.exists(reportFile)
 WebUI.comment("The report can be found ${reportFile.toString()}")
 

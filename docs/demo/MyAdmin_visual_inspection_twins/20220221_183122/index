@@ -1,0 +1,8 @@
+81a66a9eb2de9cb0ace01bf25d52b376b858e960	css	{"URL.host":"cdn.jsdelivr.net", "URL.path":"/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css", "URL.port":"80", "URL.protocol":"https", "profile":"MyAdmin_DevelopmentEnv"}
+00150349e6ebdaf2628af9ea4e56d6b02dbda393	woff2	{"URL.host":"cdn.jsdelivr.net", "URL.path":"/npm/bootstrap-icons@1.7.2/font/fonts/bootstrap-icons.woff2", "URL.port":"80", "URL.protocol":"https", "URL.query":"30af91bf14e37666a085fb8a161ff36d", "profile":"MyAdmin_DevelopmentEnv"}
+396f51b333ff6f0926f6e67ad6e6c9c69bea7b31	css	{"URL.host":"cdn.jsdelivr.net", "URL.path":"/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css", "URL.port":"80", "URL.protocol":"https", "profile":"MyAdmin_DevelopmentEnv"}
+f52210379974496514e24aeb07ecb6ef259063f6	js	{"URL.host":"cdn.jsdelivr.net", "URL.path":"/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js", "URL.port":"80", "URL.protocol":"https", "profile":"MyAdmin_DevelopmentEnv"}
+433836da7e015f2eb3fc386817de88b78248f6ef	js	{"URL.host":"cdnjs.cloudflare.com", "URL.path":"/ajax/libs/jquery/1.12.4/jquery.js", "URL.port":"80", "URL.protocol":"https", "profile":"MyAdmin_DevelopmentEnv"}
+5d7e467a45a85329612d1f0694f9d726bc14226d	html	{"URL.host":"devadmin.kazurayam.com", "URL.path":"/", "URL.port":"80", "URL.protocol":"http", "profile":"MyAdmin_DevelopmentEnv"}
+461c4b84aa5fab9089a3f0434b5429f5c5d2309f	png	{"URL.host":"devadmin.kazurayam.com", "URL.path":"/", "URL.port":"80", "URL.protocol":"http", "profile":"MyAdmin_DevelopmentEnv"}
+d0ecc09ff333e6051b12b21f97e63101dcbb877b	jpg	{"URL.host":"devadmin.kazurayam.com", "URL.path":"/umineko-1960x1960.jpg", "URL.port":"80", "URL.protocol":"http", "profile":"MyAdmin_DevelopmentEnv"}
