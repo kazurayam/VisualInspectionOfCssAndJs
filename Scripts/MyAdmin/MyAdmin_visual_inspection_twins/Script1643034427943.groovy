@@ -5,7 +5,7 @@ import java.nio.file.Path
 import java.nio.file.Paths
 
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
-import com.kazurayam.materialstore.diffartifact.DiffArtifactGroup
+import com.kazurayam.materialstore.resolvent.ArtifactGroup
 import com.kazurayam.materialstore.filesystem.JobName
 import com.kazurayam.materialstore.filesystem.JobTimestamp
 import com.kazurayam.materialstore.filesystem.MaterialList
@@ -61,18 +61,18 @@ MaterialList right = store.select(jobName, timestampD,
 			MetadataPattern.builderWithMap([ "profile": profile2 ]).build()
 			)
 
-// difference greater than the criteria should be warned
-double criteria = 0.0d
-
+MaterialstoreFacade facade = new MaterialstoreFacade(store)
+			
 // compare 2 MaterialList objects, generate the diff information
-DiffArtifactGroup prepared = 
-	DiffArtifactGroup.builder(left, right)
+ArtifactGroup prepared = 
+	ArtifactGroup.builder(left, right)
 		.ignoreKeys("profile", "URL.protocol", "URL.port")
 		.identifyWithRegex(["URL.query": "\\w{32}", "URL.host": "(my|dev)admin.kazurayam.com"])
 		.build()  
-MaterialstoreFacade facade = new MaterialstoreFacade(store)
-DiffArtifactGroup workedOut = facade.workOn(prepared)
+ArtifactGroup workedOut = facade.workOn(prepared)
 
+// difference greater than the criteria should be warned
+double criteria = 0.0d
 int warnings = workedOut.countWarnings(criteria)
 
 // compile HTML report

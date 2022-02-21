@@ -2,12 +2,12 @@
 
 // $ gradle drivers
 
-version = '0.3.3'
+version = '0.3.4'
 
 ext {
     AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
     ExecutionProfilesLoaderVersion = "1.2.1"
-    materialstoreVersion = '0.2.0'
+    materialstoreVersion = '0.3.1'
     ashotVersion = '1.5.4'
     javadiffutilsVersion = '4.9'
     jsoupVersion = '1.7.2'
