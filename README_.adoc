@@ -59,8 +59,8 @@ chrome-devtools-java-client]
 
 See the source codes of test cases:
 
-- link:./Scripts/MyAdmin/MyAdmin_visual_inspection_twins/Script1643034427943.groovy[Test Cases/MyAdmin/MyAdmin_visual_inspection_twins]
-- link:./Scripts/MyAdmin/visitSite/Script1643072442615.groovy[Test Cases/MyAdmin/visitSite]
+- link:./Scripts/MyAdmin/Main_Twins/Script1643034427943.groovy[Test Cases/MyAdmin/Main_Twins]
+- link:./Scripts/MyAdmin/materialize/Script1643072442615.groovy[Test Cases/MyAdmin/materialize]
 - link:./Scripts/MyAdmin/materializeCssJs_by_kklisura_CDT/Script1643072742739.groovy[Test Cases/MyAdmin/materializeCssJs_by_kklisure_CDT]
 - link:./Scripts/MyAdmin/materializeCssJs_by_Selenium4_CDT/Script1643072750293.groovy[Test Cases/MyAdmin/materializeCssJs_by_Selenium4_CDT]
 
@@ -71,7 +71,7 @@ I learned the following artiles to learn how to write programs that drive Chrome
 
 === How the test script works
 
-1. I start the link:./Scripts/MyAdmin/MyAdmin_visual_inspection_twins/Script1643034427943.groovy[Test Cases/MyAdmin/MyAdmin_visual_inspection_twins]
+1. I start the link:./Scripts/MyAdmin/Main_Twinswins/Script1643034427943.groovy[Test Cases/MyAdmin/Main_Twins]
 2. the script visits 2 web sites
 * http://myadmin.kazurayam.com 
 * http://devadmin.kazurayam.com

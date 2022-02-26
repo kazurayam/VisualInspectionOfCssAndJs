@@ -63,9 +63,9 @@ You have 2 options.
 
 See the source codes of test cases:
 
--   [Test Cases/MyAdmin/MyAdmin\_visual\_inspection\_twins](./Scripts/MyAdmin/MyAdmin_visual_inspection_twins/Script1643034427943.groovy)
+-   [Test Cases/MyAdmin/Main\_Twins](./Scripts/MyAdmin/Main_Twins/Script1643034427943.groovy)
 
--   [Test Cases/MyAdmin/visitSite](./Scripts/MyAdmin/visitSite/Script1643072442615.groovy)
+-   [Test Cases/MyAdmin/materialize](./Scripts/MyAdmin/materialize/Script1643072442615.groovy)
 
 -   [Test Cases/MyAdmin/materializeCssJs\_by\_kklisure\_CDT](./Scripts/MyAdmin/materializeCssJs_by_kklisura_CDT/Script1643072742739.groovy)
 
@@ -79,7 +79,7 @@ I learned the following artiles to learn how to write programs that drive Chrome
 
 ### How the test script works
 
-1.  I start the [Test Cases/MyAdmin/MyAdmin\_visual\_inspection\_twins](./Scripts/MyAdmin/MyAdmin_visual_inspection_twins/Script1643034427943.groovy)
+1.  I start the [Test Cases/MyAdmin/Main\_Twins](./Scripts/MyAdmin/Main_Twinswins/Script1643034427943.groovy)
 
 2.  the script visits 2 web sites
 

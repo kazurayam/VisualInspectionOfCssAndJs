@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>visitSite</name>
+   <name>materialize</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>e170eb0c-01ab-4bfe-a836-303d1952253a</testCaseGuid>

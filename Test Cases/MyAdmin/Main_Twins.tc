@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>MyAdmin_visual_inspection_twins</name>
+   <name>Main_Twins</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>62b2b876-edaf-471f-b49c-b6f116dddd44</testCaseGuid>
