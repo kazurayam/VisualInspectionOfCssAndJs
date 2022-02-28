@@ -91,7 +91,7 @@ responses.each { resp ->
 		
 		// copy the file into the masterialstore
 		FileType fileType = FileType.ofMimeType(resp.getMimeType())
-		Metadata metadata = Metadata.builderWithUrl(resp.getUrl()).put("profile", profile).build()
+		Metadata metadata = Metadata.builder(resp.getUrl()).put("profile", profile).build()
 		Material mat = store.write(jobName, jobTimestamp, fileType, metadata, tempFile)
 		assert mat != null
 	}
