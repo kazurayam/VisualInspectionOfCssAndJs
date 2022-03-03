@@ -12,7 +12,7 @@ import com.kazurayam.materialstore.filesystem.MaterialList
 import com.kazurayam.materialstore.filesystem.Store
 import com.kazurayam.materialstore.filesystem.Stores
 import com.kazurayam.materialstore.metadata.QueryOnMetadata
-import com.kazurayam.materialstore.resolvent.ArtifactGroup
+import com.kazurayam.materialstore.reduce.MProductGroup
 import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -62,23 +62,23 @@ WebUI.callTestCase(
  */
 // pickup the materials that belongs to the 2 "profiles"
 MaterialList left = store.select(jobName, timestampP,
-			QueryOnMetadata.builderWithMap([ "profile": profile1 ]).build()
+			QueryOnMetadata.builder([ "profile": profile1 ]).build()
 			)
 
 MaterialList right = store.select(jobName, timestampD,
-			QueryOnMetadata.builderWithMap([ "profile": profile2 ]).build()
+			QueryOnMetadata.builder([ "profile": profile2 ]).build()
 			)
 
 			
 // compare 2 MaterialList objects, generate the diff information
-ArtifactGroup prepared = 
-	ArtifactGroup.builder(left, right)
+MProductGroup prepared = 
+	MProductGroup.builder(left, right)
 		.ignoreKeys("profile", "URL.protocol", "URL.port")
 		.identifyWithRegex(["URL.query": "\\w{32}", "URL.host": "(my|dev)admin.kazurayam.com"])
 		.build()
 
 MaterialstoreFacade facade = MaterialstoreFacade.newInstance(store)		
-ArtifactGroup reduced = facade.reduce(prepared)
+MProductGroup reduced = facade.reduce(prepared)
 
 
 
