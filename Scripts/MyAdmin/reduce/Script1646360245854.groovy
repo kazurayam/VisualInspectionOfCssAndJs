@@ -1,4 +1,4 @@
-import com.kazurayam.materialstore.MaterialstoreFacade
+import com.kazurayam.materialstore.Inspector
 import com.kazurayam.materialstore.filesystem.MaterialList
 import com.kazurayam.materialstore.reduce.MProductGroup
 import com.kazurayam.materialstore.reduce.MProductGroupBuilder
@@ -28,7 +28,7 @@ MProductGroup prepared =
 	MProductGroupBuilder.twins(store,
 		leftMaterialList, rightMaterialList, func)
 
-MaterialstoreFacade facade = MaterialstoreFacade.newInstance(store)
-MProductGroup reduced = facade.reduce(prepared)
+Inspector inspector = Inspector.newInstance(store)
+MProductGroup reduced = inspector.reduce(prepared)
 	
 return reduced

@@ -7,7 +7,7 @@ version = '0.4.2'
 ext {
     AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
     ExecutionProfilesLoaderVersion = "1.2.1"
-    materialstoreVersion = '0.4.6-SNAPSHOT'
+    materialstoreVersion = '0.4.6'
     ashotVersion = '1.5.4'
     javadiffutilsVersion = '4.9'
     jsoupVersion = '1.7.2'

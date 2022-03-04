@@ -2,7 +2,7 @@ import java.nio.file.Files
 import java.nio.file.Path
 
 import com.kazurayam.materialstore.filesystem.JobName
-import com.kazurayam.materialstore.MaterialstoreFacade
+import com.kazurayam.materialstore.Inspector
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 /**
@@ -20,8 +20,8 @@ WebUI.comment("report started; criteria=${criteria}, mProductGroup=${mProductGro
 // the file name of HTML report
 String fileName = jobName.toString()+ "-index.html"
 
-MaterialstoreFacade facade = MaterialstoreFacade.newInstance(store)
-Path report = facade.report(mProductGroup, criteria, fileName)
+Inspector inspector = Inspector.newInstance(store)
+Path report = inspector.report(mProductGroup, criteria, fileName)
 
 assert Files.exists(report)
 WebUI.comment("The report can be found at ${report.toString()}")
