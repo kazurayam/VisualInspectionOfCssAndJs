@@ -17,8 +17,10 @@ import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import groovy.json.JsonOutput
+
 /**
- * MyAdmin/MyAdmin_visual_inspection_twins
+ * MyAdmin/Main_Twins
  */
 
 Path projectDir = Paths.get(RunConfiguration.getProjectDir())
@@ -61,6 +63,9 @@ WebUI.callTestCase(
  * Reduce stage
  */
 // pickup the materials that belongs to the 2 "profiles"
+// identify 2 MaterialList objects: left and right = production and development
+// compare the right(development) against the left(project)
+// find differences betwee the 2 versions --- Twins mode
 MaterialList left = store.select(jobName, timestampP,
 			QueryOnMetadata.builder([ "profile": profile1 ]).build()
 			)
@@ -69,34 +74,36 @@ MaterialList right = store.select(jobName, timestampD,
 			QueryOnMetadata.builder([ "profile": profile2 ]).build()
 			)
 
+WebUI.comment("left=${left.toString()}")
+WebUI.comment("right=${right.toString()}")
 			
-// compare 2 MaterialList objects, generate the diff information
-MProductGroup prepared = 
-	MProductGroup.builder(left, right)
-		.ignoreKeys("profile", "URL.protocol", "URL.port")
-		.identifyWithRegex(["URL.query": "\\w{32}", "URL.host": "(my|dev)admin.kazurayam.com"])
-		.build()
-
-MaterialstoreFacade facade = MaterialstoreFacade.newInstance(store)		
-MProductGroup reduced = facade.reduce(prepared)
-
+MProductGroup reduced =
+	WebUI.callTestCase(findTestCase("MyAdmin/reduce"),
+		["store": store,
+			"leftMaterialList": left,
+			"rightMaterialList": right
+			])
+WebUI.comment("reduced=${JsonOutput.prettyPrint(reduced.toString())}")
+assert reduced.size() > 0			
 
 
 
+//---------------------------------------------------------------------
 /*
  * Report stage
  */
-// difference greater than the criteria should be warned
-double criteria = 0.0d
+// compile a human-readable report
+int warnings =
+	WebUI.callTestCase(findTestCase("MyAdmin/report"),
+		["store": store, "mProductGroup": reduced, "criteria": 0.0d])
 
-// compile HTML report
-String fileName = jobName.toString() + "-index.html"
-Path reportFile = facade.report(jobName, reduced, criteria, fileName)
+	
+	
 
-assert Files.exists(reportFile)
-WebUI.comment("The report can be found ${reportFile.toString()}")
-
-int warnings = reduced.countWarnings(criteria)
+//---------------------------------------------------------------------
+/*
+ * Epilogue
+ */
 if (warnings > 0) {
 	KeywordUtil.markWarning("found ${warnings} differences.")
 }
