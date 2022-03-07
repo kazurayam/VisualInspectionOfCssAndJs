@@ -12,6 +12,9 @@ import com.kms.katalon.core.util.KeywordUtil
 
 import internal.GlobalVariable
 
+/**
+ * Test Cases/MyAdmin/materialize
+ */
 
 // check params which should be passed as the arguments of WebUI.callTestCases() call
 Objects.requireNonNull(profile)

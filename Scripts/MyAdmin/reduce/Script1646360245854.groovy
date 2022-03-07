@@ -5,6 +5,10 @@ import com.kazurayam.materialstore.reduce.MProductGroupBuilder
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import java.util.function.BiFunction
 
+/**
+ * Test Cases/MyAdmin/reduce
+ * 
+ */
 assert store != null
 assert leftMaterialList != null
 assert rightMaterialList != null

@@ -18,7 +18,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import groovy.json.JsonOutput
 
 /**
- * MyAdmin/Main_Twins
+ * Test Cases/MyAdmin/Main_Twins
  */
 
 Path projectDir = Paths.get(RunConfiguration.getProjectDir())

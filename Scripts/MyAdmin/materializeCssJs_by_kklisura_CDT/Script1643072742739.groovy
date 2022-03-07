@@ -17,6 +17,10 @@ import com.kazurayam.materialstore.filesystem.FileType
 import com.kazurayam.materialstore.filesystem.Material
 import com.kazurayam.materialstore.metadata.Metadata
 
+/**
+ * Test Cases/MyAdmin/materializeCssJs_by_kklisura_CDT
+ * 
+ */
 Objects.requireNonNull(chrome)
 assert chrome instanceof ChromeDriver
 Objects.requireNonNull(store)

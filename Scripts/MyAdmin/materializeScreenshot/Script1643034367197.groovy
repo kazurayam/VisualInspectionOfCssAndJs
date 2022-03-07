@@ -11,6 +11,10 @@ import com.kazurayam.materialstore.metadata.Metadata
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+/**
+ * Test Cases/MyAdmin/materializeScreenshot
+ * 
+ */
 Objects.requireNonNull(chrome)
 Objects.requireNonNull(store)
 Objects.requireNonNull(jobName)

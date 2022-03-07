@@ -16,6 +16,10 @@ import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.devtools.DevTools
 import org.openqa.selenium.devtools.v96.network.Network
 
+/**
+ * Test Cases/MyAdmin/materializeCssJs_by_Selenium4_CDT
+ * 
+ */
 Objects.requireNonNull(chrome)
 assert chrome instanceof ChromeDriver
 Objects.requireNonNull(store)
