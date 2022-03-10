@@ -86,3 +86,9 @@ I learned the following artiles to learn how to write programs that drive Chrome
 4. the script process the files and compile a report
 
 image::https://kazurayam.github.io/VisualInspectionOfCssAndJs/diagrams/out/sequence/sequence.png[Sequence diagram]
+
+== APPENDIX
+
+- [materialstore API javadoc](https://kazurayam.github.io/materialstore/api/)
+- [materialstore-mapper API javadoc](https://kazurayam.github.io/materialstore-mapper/api/)
+

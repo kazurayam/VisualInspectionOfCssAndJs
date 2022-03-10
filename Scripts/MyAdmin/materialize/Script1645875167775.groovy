@@ -4,7 +4,7 @@ import org.openqa.selenium.Dimension
 import org.openqa.selenium.Point
 import org.openqa.selenium.chrome.ChromeDriver
 
-import com.kazurayam.materialstore.metadata.Metadata
+import com.kazurayam.materialstore.filesystem.Metadata
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.util.KeywordUtil

@@ -7,7 +7,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.kazurayam.materialstore.filesystem.FileType
 import com.kazurayam.materialstore.filesystem.Material
-import com.kazurayam.materialstore.metadata.Metadata
+import com.kazurayam.materialstore.filesystem.Metadata
 import com.kazurayam.ks.visualinspection.DownloadUtil
 import com.kazurayam.ks.visualinspection.ResponseInspected
 import com.kms.katalon.core.webui.driver.DriverFactory
