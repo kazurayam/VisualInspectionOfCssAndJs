@@ -54,7 +54,11 @@ List<ResponseInspected> responses = new ArrayList<>()
 
 // log responses
 network.onResponseReceived({ event ->
-	ResponseInspected resp = new ResponseInspected(event.getResponse().getStatus(), new URL(event.getResponse().getUrl()), event.getResponse().getMimeType())
+	ResponseInspected resp = 
+		new ResponseInspected(
+				event.getResponse().getStatus(), 
+				new URL(event.getResponse().getUrl()), 
+				event.getResponse().getMimeType())
 	println resp.toString()
 	responses.add(resp)
 })

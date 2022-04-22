@@ -4,6 +4,10 @@ import org.openqa.selenium.Dimension
 import org.openqa.selenium.Point
 import org.openqa.selenium.chrome.ChromeDriver
 
+import com.kazurayam.materialstore.materialize.MaterializingPageFunctions
+import com.kazurayam.materialstore.materialize.StorageDirectory
+import com.kazurayam.materialstore.materialize.Target
+import com.kazurayam.materialstore.filesystem.Material
 import com.kazurayam.materialstore.filesystem.Metadata
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -32,20 +36,15 @@ chrome.manage().window().setSize(new Dimension(1024, 800))
 
 DriverFactory.changeWebDriver(chrome)
 WebUI.navigateToUrl("${GlobalVariable.URL}")
+
 // -------- The top page is now open --------------------------------------
 
+// take the screenshot using the AShot lib, save it into the store
 URL url = new URL(WebUI.getUrl())
+Target target = Target.builder(url).put("profile", profile).build()
+StorageDirectory sd = new StorageDirectory(store, jobName, jobTimestamp)
+Material screenshot = MaterializingPageFunctions.storeEntirePageScreenshot.accept(target, chrome, sd);
 
-// take the screensho using the Katalon keyword, save it into the store
-WebUI.callTestCase(findTestCase("MyAdmin/materializeScreenshot"),
-	[
-		"chrome": chrome,
-		"store": store,
-		"jobName": jobName,
-		"jobTimestamp": jobTimestamp,
-		"profile": profile
-	]
-)
 
 // download the web resources (HTML, CSS and JavaScript) of the page, save them into the store
 try {
