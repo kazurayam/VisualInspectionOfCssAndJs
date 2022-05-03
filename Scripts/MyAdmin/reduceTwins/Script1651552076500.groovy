@@ -20,19 +20,13 @@ WebUI.comment("reduce started; rightMaterialList=${rightMaterialList}")
 assert leftMaterialList.size() > 0
 assert rightMaterialList.size() > 0
 
-BiFunction<MaterialList, MaterialList, MProductGroup> func = {
-	MaterialList left, MaterialList right ->
-		MProductGroup.builder(leftMaterialList, rightMaterialList)
+MProductGroup reduced = 
+        MProductGroup.builder(leftMaterialList, rightMaterialList)
 			.ignoreKeys("profile", "URL.host", "URL.port", "URL.query")
 			.sort("step")
 			.build()
-}
-
-MProductGroup prepared =
-	Reducer.twins(store,
-		leftMaterialList, rightMaterialList, func)
 
 Inspector inspector = Inspector.newInstance(store)
-MProductGroup reduced = inspector.reduce(prepared)
+MProductGroup processed = inspector.process(reduced)
 	
-return reduced
+return processed

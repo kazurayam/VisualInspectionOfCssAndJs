@@ -1,11 +1,11 @@
 // VisualInspectionOfCssAndJs/build.gradle
 // $ gradle drivers
 
-version = '0.8.4-SNAPSHOT'
+version = '0.8.4'
 
 ext {
     AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
-    materialstoreVersion = '0.8.4-SNAPSHOT'
+    materialstoreVersion = '0.8.4'
     kazurayam_FreeMarker_directivesVersion = '0.2.0'
     ExecutionProfilesLoaderVersion = "1.2.1"
     ashotVersion = '1.5.4'
