@@ -6,6 +6,7 @@ import java.time.LocalDateTime
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.kazurayam.materialstore.filesystem.FileType
+import com.kazurayam.materialstore.filesystem.FileTypeUtil
 import com.kazurayam.materialstore.filesystem.Material
 import com.kazurayam.materialstore.filesystem.Metadata
 import com.kazurayam.ks.visualinspection.DownloadUtil
@@ -83,7 +84,7 @@ responses.each { resp ->
 		DownloadUtil.downloadWebResourceIntoFile(resp.getUrl(), tempFile)
 		
 		// copy the file into the masterialstore
-		FileType fileType = FileType.ofMimeType(resp.getMimeType())
+		FileType fileType = FileTypeUtil.ofMimeType(resp.getMimeType())
 		Metadata metadata = Metadata.builder(resp.getUrl()).put("profile", profile).build()
 		Material mat = store.write(jobName, jobTimestamp, fileType, metadata, tempFile)
 		assert mat != null

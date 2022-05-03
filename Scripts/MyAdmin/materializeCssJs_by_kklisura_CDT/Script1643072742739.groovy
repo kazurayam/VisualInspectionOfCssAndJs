@@ -4,7 +4,7 @@ import java.time.Duration
 import java.time.LocalDateTime
 
 import org.openqa.selenium.chrome.ChromeDriver
-
+import com.github.kklisura.cdt.launch.ChromeArguments
 import com.github.kklisura.cdt.launch.ChromeLauncher
 import com.github.kklisura.cdt.protocol.commands.Network
 import com.github.kklisura.cdt.protocol.commands.Page
@@ -14,6 +14,7 @@ import com.github.kklisura.cdt.services.types.ChromeTab
 import com.kazurayam.ks.visualinspection.DownloadUtil
 import com.kazurayam.ks.visualinspection.ResponseInspected
 import com.kazurayam.materialstore.filesystem.FileType
+import com.kazurayam.materialstore.filesystem.FileTypeUtil
 import com.kazurayam.materialstore.filesystem.Material
 import com.kazurayam.materialstore.filesystem.Metadata
 
@@ -38,7 +39,11 @@ Objects.requireNonNull(profile)
 final ChromeLauncher launcher = new ChromeLauncher()
 
 // launch Chrome
-final ChromeService chromeService = launcher.launch(false)
+final ChromeArguments chromeArguments = 
+	new ChromeArguments.Builder()
+		.additionalArguments("disable-features","ChromeWhatsNewUI")
+		.build()
+final ChromeService chromeService = launcher.launch(chromeArguments)
 
 // create an emtpy tab, ie about:blank
 final ChromeTab tab = chromeService.createTab()
@@ -98,7 +103,7 @@ responses.each { resp ->
 		DownloadUtil.downloadWebResourceIntoFile(resp.getUrl(), tempFile)
 		
 		// copy the file into the masterialstore
-		FileType fileType = FileType.ofMimeType(resp.getMimeType())
+		FileType fileType = FileTypeUtil.ofMimeType(resp.getMimeType())
 		Metadata metadata = Metadata.builder(resp.getUrl()).put("profile", profile).build()
 		Material mat = store.write(jobName, jobTimestamp, fileType, metadata, tempFile)
 		assert mat != null
