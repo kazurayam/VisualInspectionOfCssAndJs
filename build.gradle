@@ -1,11 +1,11 @@
 // VisualInspectionOfCssAndJs/build.gradle
 // $ gradle drivers
 
-version = '0.8.4'
+version = '0.8.5-SNAPSHOT'
 
 ext {
     AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
-    materialstoreVersion = '0.8.4'
+    materialstoreVersion = '0.8.5-SNAPSHOT'
     kazurayam_FreeMarker_directivesVersion = '0.2.0'
     ExecutionProfilesLoaderVersion = "1.2.1"
     ashotVersion = '1.5.4'
@@ -29,6 +29,7 @@ dependencies {
     myconf group: 'com.kazurayam', name: 'materialstore', version: "${materialstoreVersion}"
     myconf group: 'com.kazurayam', name: 'kazurayam_FreeMarker_directives', version: "${kazurayam_FreeMarker_directivesVersion}"
     myconf group: 'com.kazurayam', name: 'ExecutionProfilesLoader', version: "${ExecutionProfilesLoaderVersion}"
+    myconf group: 'com.kazurayam', name: 'subprocessj', version: "0.3.4"
     myconf group: 'ru.yandex.qatools.ashot', name: 'ashot',
                     version: "${ashotVersion}"
     myconf group: 'io.github.java-diff-utils', name: 'java-diff-utils',
@@ -56,6 +57,7 @@ task drivers {
                     "**/materialstore*.jar",
                     "**/kazurayam_FreeMarker_directives*.jar",
                     "**/ExecutionProfilesLoader*.jar",
+                    "**/subprocessj*.jar",
                     "**/ashot*.jar",
                     "**/jsoup*.jar",
                     "**/java-diff-utils*.jar",

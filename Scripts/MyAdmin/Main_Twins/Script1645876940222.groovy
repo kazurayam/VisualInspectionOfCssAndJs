@@ -1,16 +1,16 @@
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 
-import java.nio.file.Path
-import java.nio.file.Paths
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import com.kazurayam.ks.globalvariable.ExecutionProfilesLoader
-import com.kazurayam.materialstore.filesystem.JobName
-import com.kazurayam.materialstore.filesystem.JobTimestamp
-import com.kazurayam.materialstore.filesystem.MaterialList
-import com.kazurayam.materialstore.filesystem.Store
-import com.kazurayam.materialstore.filesystem.Stores
+import com.kazurayam.materialstore.filesystem.JobName;
+import com.kazurayam.materialstore.filesystem.JobTimestamp;
+import com.kazurayam.materialstore.filesystem.MaterialList;
 import com.kazurayam.materialstore.filesystem.QueryOnMetadata
-import com.kazurayam.materialstore.reduce.MProductGroup
+import com.kazurayam.materialstore.filesystem.Store;
+import com.kazurayam.materialstore.filesystem.Stores;
+import com.kazurayam.materialstore.reduce.MProductGroup;
 import com.kms.katalon.core.configuration.RunConfiguration
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -105,3 +105,11 @@ int warnings =
 if (warnings > 0) {
 	KeywordUtil.markWarning("found ${warnings} differences.")
 }
+
+
+//---------------------------------------------------------------------
+/*
+ * generate structural diagrams of the MProductGroup object
+ */
+WebUI.callTestCase(findTestCase("MyAdmin/struct_diagram"),
+	["store": store, "jobName": jobName, "jobTimestamp": JobTimestamp.now(), "mProductGroup": reduced])

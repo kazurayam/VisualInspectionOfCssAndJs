@@ -22,7 +22,7 @@ assert rightMaterialList.size() > 0
 
 MProductGroup reduced = 
         MProductGroup.builder(leftMaterialList, rightMaterialList)
-			.ignoreKeys("profile", "URL.host", "URL.port", "URL.query")
+			.ignoreKeys("profile", "URL.host", "URL.port", "URL.protocol", "URL.query")
 			.sort("step")
 			.build()
 
