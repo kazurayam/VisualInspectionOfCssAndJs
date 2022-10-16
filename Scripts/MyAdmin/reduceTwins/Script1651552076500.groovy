@@ -27,6 +27,6 @@ MProductGroup reduced =
 			.build()
 
 Inspector inspector = Inspector.newInstance(store)
-MProductGroup processed = inspector.process(reduced)
+MProductGroup inspected = inspector.process(reduced)
 	
-return processed
+return inspected

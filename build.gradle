@@ -1,11 +1,10 @@
 // VisualInspectionOfCssAndJs/build.gradle
 // $ gradle drivers
 
-version = '0.8.5-SNAPSHOT'
+version = '0.10.3'
 
 ext {
-    AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
-    materialstoreVersion = '0.8.5-SNAPSHOT'
+    materialstoreVersion = '0.10.3'
     kazurayam_FreeMarker_directivesVersion = '0.2.0'
     ExecutionProfilesLoaderVersion = "1.2.1"
     ashotVersion = '1.5.4'
@@ -14,6 +13,7 @@ ext {
     freemarkerVersion = '2.3.31'
     cdtjavaclientVersion = '4.0.0'
     seleniumdevtoolsv96Version = '4.1.1'
+    AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
 }
 
 repositories {
