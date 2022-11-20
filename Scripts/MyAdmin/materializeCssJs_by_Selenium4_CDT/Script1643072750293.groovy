@@ -3,19 +3,16 @@ import java.nio.file.Path
 import java.time.Duration
 import java.time.LocalDateTime
 
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.kazurayam.materialstore.filesystem.FileType
-import com.kazurayam.materialstore.filesystem.FileTypeUtil
-import com.kazurayam.materialstore.filesystem.Material
-import com.kazurayam.materialstore.filesystem.Metadata
-import com.kazurayam.ks.visualinspection.DownloadUtil
-import com.kazurayam.ks.visualinspection.ResponseInspected
-import com.kms.katalon.core.webui.driver.DriverFactory
-
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.devtools.DevTools
 import org.openqa.selenium.devtools.v96.network.Network
+
+import com.kazurayam.ks.visualinspection.DownloadUtil
+import com.kazurayam.ks.visualinspection.ResponseInspected
+import com.kazurayam.materialstore.core.filesystem.FileType
+import com.kazurayam.materialstore.core.filesystem.FileTypeUtil
+import com.kazurayam.materialstore.core.filesystem.Material
+import com.kazurayam.materialstore.core.filesystem.Metadata
 
 /**
  * Test Cases/MyAdmin/materializeCssJs_by_Selenium4_CDT

@@ -1,10 +1,10 @@
 // VisualInspectionOfCssAndJs/build.gradle
 // $ gradle drivers
 
-version = '0.12.2'
+version = '0.12.5'
 
 ext {
-    materialstoreVersion = '0.12.2'
+    materialstoreVersion = '0.12.5'
     kazurayam_FreeMarker_directivesVersion = '0.2.0'
     ExecutionProfilesLoaderVersion = "1.2.1"
     ashotVersion = '1.5.4'

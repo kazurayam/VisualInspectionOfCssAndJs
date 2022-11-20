@@ -4,6 +4,7 @@ import java.time.Duration
 import java.time.LocalDateTime
 
 import org.openqa.selenium.chrome.ChromeDriver
+
 import com.github.kklisura.cdt.launch.ChromeArguments
 import com.github.kklisura.cdt.launch.ChromeLauncher
 import com.github.kklisura.cdt.protocol.commands.Network
@@ -13,10 +14,10 @@ import com.github.kklisura.cdt.services.ChromeService
 import com.github.kklisura.cdt.services.types.ChromeTab
 import com.kazurayam.ks.visualinspection.DownloadUtil
 import com.kazurayam.ks.visualinspection.ResponseInspected
-import com.kazurayam.materialstore.filesystem.FileType
-import com.kazurayam.materialstore.filesystem.FileTypeUtil
-import com.kazurayam.materialstore.filesystem.Material
-import com.kazurayam.materialstore.filesystem.Metadata
+import com.kazurayam.materialstore.core.filesystem.FileType
+import com.kazurayam.materialstore.core.filesystem.FileTypeUtil
+import com.kazurayam.materialstore.core.filesystem.Material
+import com.kazurayam.materialstore.core.filesystem.Metadata
 
 /**
  * Test Cases/MyAdmin/materializeCssJs_by_kklisura_CDT
