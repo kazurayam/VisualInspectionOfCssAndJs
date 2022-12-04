@@ -1,19 +1,10 @@
 // VisualInspectionOfCssAndJs/build.gradle
 // $ gradle drivers
 
-version = '0.12.5'
+version = '0.13.1-SNAPSHOT'
 
 ext {
-    materialstoreVersion = '0.12.5'
-    kazurayam_FreeMarker_directivesVersion = '0.2.0'
-    ExecutionProfilesLoaderVersion = "1.2.1"
-    ashotVersion = '1.5.4'
-    javadiffutilsVersion = '4.9'
-    jsoupVersion = '1.7.2'
-    freemarkerVersion = '2.3.31'
-    cdtjavaclientVersion = '4.0.0'
-    seleniumdevtoolsv96Version = '4.1.1'
-    AUTO_IMPORTED_JAR_PREFIX = 'AUTOIMPORTED_'
+    ADDITIONAL_JAR_PREFIX = 'ADDITIONAL_'
 }
 
 repositories {
@@ -26,26 +17,22 @@ configurations {
 }
 
 dependencies {
-    myconf group: 'com.kazurayam', name: 'materialstore', version: "${materialstoreVersion}"
-    myconf group: 'com.kazurayam', name: 'kazurayam_FreeMarker_directives', version: "${kazurayam_FreeMarker_directivesVersion}"
-    myconf group: 'com.kazurayam', name: 'ExecutionProfilesLoader', version: "${ExecutionProfilesLoaderVersion}"
+    myconf group: 'com.kazurayam', name: 'materialstore', version: '0.13.1-SNAPSHOT'
+    myconf group: 'com.kazurayam', name: 'inspectus4selenium', version: '0.2.0-SNAPSHOT'
+    myconf group: 'com.kazurayam', name: 'ExecutionProfilesLoader', version: '1.2.1'
     myconf group: 'com.kazurayam', name: 'subprocessj', version: "0.3.4"
-    myconf group: 'ru.yandex.qatools.ashot', name: 'ashot',
-                    version: "${ashotVersion}"
-    myconf group: 'io.github.java-diff-utils', name: 'java-diff-utils',
-                    version: "${javadiffutilsVersion}"
-    myconf group: 'org.jsoup', name: 'jsoup', version: "${jsoupVersion}"
-    myconf group: 'org.freemarker', name: 'freemarker', version: "${freemarkerVersion}"
-    myconf group: 'com.github.kklisura.cdt', name: 'cdt-java-client',
-        version: "${cdtjavaclientVersion}"
-    myconf group: 'org.seleniumhq.selenium', name: 'selenium-devtools-v96',
-        version: "${seleniumdevtoolsv96Version}"
+    myconf group: 'ru.yandex.qatools.ashot', name: 'ashot', version: '1.5.4'
+    myconf group: 'io.github.java-diff-utils', name: 'java-diff-utils', version: '4.9'
+    myconf group: 'org.jsoup', name: 'jsoup', version: '1.7.2'
+    myconf group: 'org.freemarker', name: 'freemarker', version: '2.3.31'
+    myconf group: 'com.github.kklisura.cdt', name: 'cdt-java-client', version: '4.0.0'
+    myconf group: 'org.seleniumhq.selenium', name: 'selenium-devtools-v96', version: '4.1.1'
 }
 
 task drivers {
     doFirst {
         delete fileTree("Drivers") {
-            include("**/" + AUTO_IMPORTED_JAR_PREFIX + "*")
+            include("**/" + ADDITIONAL_JAR_PREFIX + "*")
         }
     }
     doLast {
@@ -55,7 +42,7 @@ task drivers {
                 .into("Drivers")
                 .include(
                     "**/materialstore*.jar",
-                    "**/kazurayam_FreeMarker_directives*.jar",
+                    "**/inspectus4selenium*.jar",
                     "**/ExecutionProfilesLoader*.jar",
                     "**/subprocessj*.jar",
                     "**/ashot*.jar",
@@ -66,7 +53,7 @@ task drivers {
                     "**/selenium-devtools-v96*.jar"
                     )
                 .rename({ s ->
-                    AUTO_IMPORTED_JAR_PREFIX + s
+                    ADDITIONAL_JAR_PREFIX + s
                     })
         }
     }
